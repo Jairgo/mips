@@ -1,0 +1,1042 @@
+Analysis & Synthesis report for Datapath
+Sat Nov 16 20:54:44 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Datapath|Controle:Control|currentState
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit
+ 13. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1
+ 14. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador
+ 15. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations
+ 16. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer
+ 17. Parameter Settings for User Entity Instance: memInstrucao:MemIns
+ 18. Parameter Settings for User Entity Instance: memDados:MemDad
+ 19. Parameter Settings for User Entity Instance: Mux2x1:Mux1
+ 20. Parameter Settings for User Entity Instance: Mux2x1:Mux2
+ 21. Parameter Settings for User Entity Instance: Mux2x1:Mux3
+ 22. Parameter Settings for User Entity Instance: Mux2x1:Mux4
+ 23. Parameter Settings for User Entity Instance: Mux4x1:Mux5
+ 24. Parameter Settings for User Entity Instance: Mux4x1:Mux6
+ 25. Port Connectivity Checks: "Mux4x1:Mux6"
+ 26. Port Connectivity Checks: "Mux4x1:Mux5"
+ 27. Port Connectivity Checks: "memDados:MemDad"
+ 28. Port Connectivity Checks: "memInstrucao:MemIns"
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 16 20:54:44 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Datapath                                        ;
+; Top-level Entity Name              ; Datapath                                        ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 554                                             ;
+;     Total combinational functions  ; 456                                             ;
+;     Dedicated logic registers      ; 138                                             ;
+; Total registers                    ; 138                                             ;
+; Total pins                         ; 279                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Datapath           ; Datapath           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+; Components/AndOr.vhd             ; yes             ; User VHDL File  ; /work/mips/Components/AndOr.vhd          ;         ;
+; Components/ULA_Wrapper.vhd       ; yes             ; User VHDL File  ; /work/mips/Components/ULA_Wrapper.vhd    ;         ;
+; Components/ULA_Control.vhd       ; yes             ; User VHDL File  ; /work/mips/Components/ULA_Control.vhd    ;         ;
+; Components/ULA.vhd               ; yes             ; User VHDL File  ; /work/mips/Components/ULA.vhd            ;         ;
+; Components/SumSub.vhd            ; yes             ; User VHDL File  ; /work/mips/Components/SumSub.vhd         ;         ;
+; Components/SignalExtender.vhd    ; yes             ; User VHDL File  ; /work/mips/Components/SignalExtender.vhd ;         ;
+; Components/shiftleft22.vhd       ; yes             ; User VHDL File  ; /work/mips/Components/shiftleft22.vhd    ;         ;
+; Components/shiftLeft2.vhd        ; yes             ; User VHDL File  ; /work/mips/Components/shiftLeft2.vhd     ;         ;
+; Components/regInstrucao.vhd      ; yes             ; User VHDL File  ; /work/mips/Components/regInstrucao.vhd   ;         ;
+; Components/ProgramCounter.vhd    ; yes             ; User VHDL File  ; /work/mips/Components/ProgramCounter.vhd ;         ;
+; Components/Mux4x1.vhd            ; yes             ; User VHDL File  ; /work/mips/Components/Mux4x1.vhd         ;         ;
+; Components/Mux2x1.vhd            ; yes             ; User VHDL File  ; /work/mips/Components/Mux2x1.vhd         ;         ;
+; Components/memInstrucoes.vhd     ; yes             ; User VHDL File  ; /work/mips/Components/memInstrucoes.vhd  ;         ;
+; Components/memDados.vhd          ; yes             ; User VHDL File  ; /work/mips/Components/memDados.vhd       ;         ;
+; Components/bitsReg.vhd           ; yes             ; User VHDL File  ; /work/mips/Components/bitsReg.vhd        ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; /work/mips/Datapath.vhd                  ;         ;
+; Controle.vhd                     ; yes             ; User VHDL File  ; /work/mips/Controle.vhd                  ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 554   ;
+;                                             ;       ;
+; Total combinational functions               ; 456   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 175   ;
+;     -- 3 input functions                    ; 271   ;
+;     -- <=2 input functions                  ; 10    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 394   ;
+;     -- arithmetic mode                      ; 62    ;
+;                                             ;       ;
+; Total registers                             ; 138   ;
+;     -- Dedicated logic registers            ; 138   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 279   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 138   ;
+; Total fan-out                               ; 2000  ;
+; Average fan-out                             ; 2.29  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
+; |Datapath                      ; 456 (14)          ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 279  ; 0            ; |Datapath                                                  ; work         ;
+;    |Controle:Control|          ; 26 (26)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Controle:Control                                 ; work         ;
+;    |Mux2x1:Mux2|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux2                                      ; work         ;
+;    |Mux2x1:Mux3|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux3                                      ; work         ;
+;    |Mux2x1:Mux4|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux4                                      ; work         ;
+;    |Mux4x1:Mux5|               ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux5                                      ; work         ;
+;    |Mux4x1:Mux6|               ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux6                                      ; work         ;
+;    |ProgramCounter:PC1|        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ProgramCounter:PC1                               ; work         ;
+;    |ULA_Wrapper:ULAUnit|       ; 173 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit                              ; work         ;
+;       |ULA:ula_1|              ; 169 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1                    ; work         ;
+;          |Mux2x1:Multiplexer|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer ; work         ;
+;          |SumSub:Somador|      ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador     ; work         ;
+;       |ULA_Control:ula_ctrl_1| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1       ; work         ;
+;    |bitsReg:RegA|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegA                                     ; work         ;
+;    |bitsReg:RegB|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegB                                     ; work         ;
+;    |bitsReg:RegDados|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegDados                                 ; work         ;
+;    |bitsReg:RegULASaida|       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegULASaida                              ; work         ;
+;    |regInstrucao:RegIns|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|regInstrucao:RegIns                              ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Datapath|Controle:Control|currentState                                                                                                                                             ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; currentState.S9 ; currentState.S8 ; currentState.S7 ; currentState.S6 ; currentState.S5 ; currentState.S4 ; currentState.S3 ; currentState.S2 ; currentState.S1 ; currentState.S0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; currentState.S0 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; currentState.S1 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
+; currentState.S2 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
+; currentState.S3 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
+; currentState.S4 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
+; currentState.S5 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; currentState.S6 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; currentState.S7 ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; currentState.S8 ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
+; currentState.S9 ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                             ;
++-----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------+------------------------+
+; ProgramCounter:PC1|addr_Output[0]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output7[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[31]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[15]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[30]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[29]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[28]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[27]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[26]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[25]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[24]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[23]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[22]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[21]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[20]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[19]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[18]                  ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[17]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[14]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[16]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[13]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[15]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[12]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[14]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[11]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[13]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[10]                ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[12]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[9]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[11]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[8]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[10]                  ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[7]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[9]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[6]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[8]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[7]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[6]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[5]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[4]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output5[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; ProgramCounter:PC1|addr_Output[3]                   ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[2]                   ; writeEnablePC                    ; yes                    ;
+; ProgramCounter:PC1|addr_Output[1]                   ; writeEnablePC                    ; yes                    ;
+; regInstrucao:RegIns|addr_Output3[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output4[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output3[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output4[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output3[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output4[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output3[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output4[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output3[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output4[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[6]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[7]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[8]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[9]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[10]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[11]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[12]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[13]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[14]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[15]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[16]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[17]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[18]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[19]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[20]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[21]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[22]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[23]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[24]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output6[25]                ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; regInstrucao:RegIns|addr_Output1[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
+; Number of user-specified and inferred latches = 96  ;                                  ;                        ;
++-----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 138   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[22]                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1|Mux3 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[0]                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                      ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[12]                               ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[28]                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[0]                                ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|Result[1]         ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; data           ; 32    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; data           ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; data           ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; data           ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memInstrucao:MemIns ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; data_width     ; 32    ; Signed Integer                          ;
+; addr_width     ; 10    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memDados:MemDad ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; data_width     ; 32    ; Signed Integer                      ;
+; addr_width     ; 5     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2x1:Mux1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2x1:Mux2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 5     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2x1:Mux3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2x1:Mux4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux4x1:Mux5 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux4x1:Mux6 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "Mux4x1:Mux6" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; d    ; Input ; Info     ; Stuck at GND  ;
++------+-------+----------+---------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "Mux4x1:Mux5"    ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND ;
+; b[2]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memDados:MemDad"                                                                     ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; data1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memInstrucao:MemIns"                                                                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; data1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Nov 16 20:54:41 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c Datapath
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file Components/AndOr.vhd
+    Info (12022): Found design unit 1: AndOr-Behavior
+    Info (12023): Found entity 1: AndOr
+Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA_Wrapper.vhd
+    Info (12022): Found design unit 1: ULA_Wrapper-behavior
+    Info (12023): Found entity 1: ULA_Wrapper
+Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA_Control.vhd
+    Info (12022): Found design unit 1: ULA_Control-behavior
+    Info (12023): Found entity 1: ULA_Control
+Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA.vhd
+    Info (12022): Found design unit 1: ULA-Behavior
+    Info (12023): Found entity 1: ULA
+Info (12021): Found 2 design units, including 1 entities, in source file Components/SumSub.vhd
+    Info (12022): Found design unit 1: SumSub-Behavior
+    Info (12023): Found entity 1: SumSub
+Info (12021): Found 2 design units, including 1 entities, in source file Components/SignalExtender.vhd
+    Info (12022): Found design unit 1: SignalExtender-Behavior
+    Info (12023): Found entity 1: SignalExtender
+Info (12021): Found 2 design units, including 1 entities, in source file Components/shiftleft22.vhd
+    Info (12022): Found design unit 1: shiftleft22-Behavior
+    Info (12023): Found entity 1: shiftleft22
+Info (12021): Found 2 design units, including 1 entities, in source file Components/shiftLeft2.vhd
+    Info (12022): Found design unit 1: shiftLeft2-Behavior
+    Info (12023): Found entity 1: shiftLeft2
+Info (12021): Found 2 design units, including 1 entities, in source file Components/regInstrucao.vhd
+    Info (12022): Found design unit 1: regInstrucao-behavior
+    Info (12023): Found entity 1: regInstrucao
+Info (12021): Found 2 design units, including 1 entities, in source file Components/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-behave
+    Info (12023): Found entity 1: reg_file
+Info (12021): Found 2 design units, including 1 entities, in source file Components/ProgramCounter.vhd
+    Info (12022): Found design unit 1: ProgramCounter-Behavior
+    Info (12023): Found entity 1: ProgramCounter
+Info (12021): Found 2 design units, including 1 entities, in source file Components/Mux4x1.vhd
+    Info (12022): Found design unit 1: Mux4x1-behavior
+    Info (12023): Found entity 1: Mux4x1
+Info (12021): Found 2 design units, including 1 entities, in source file Components/Mux2x1.vhd
+    Info (12022): Found design unit 1: Mux2x1-behavior
+    Info (12023): Found entity 1: Mux2x1
+Info (12021): Found 2 design units, including 1 entities, in source file Components/MIPS.vhd
+    Info (12022): Found design unit 1: MIPS-estrutura
+    Info (12023): Found entity 1: MIPS
+Info (12021): Found 2 design units, including 1 entities, in source file Components/memInstrucoes.vhd
+    Info (12022): Found design unit 1: memInstrucao-rtl
+    Info (12023): Found entity 1: memInstrucao
+Info (12021): Found 2 design units, including 1 entities, in source file Components/memDados.vhd
+    Info (12022): Found design unit 1: memDados-rtl
+    Info (12023): Found entity 1: memDados
+Info (12021): Found 2 design units, including 1 entities, in source file Components/gate.vhd
+    Info (12022): Found design unit 1: gate2-behavior
+    Info (12023): Found entity 1: gate2
+Info (12021): Found 2 design units, including 1 entities, in source file Components/bitsReg.vhd
+    Info (12022): Found design unit 1: bitsReg-behavior
+    Info (12023): Found entity 1: bitsReg
+Warning (12019): Can't analyze file -- file Components/And_Or.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file Datapath.vhd
+    Info (12022): Found design unit 1: Datapath-Behavior
+    Info (12023): Found entity 1: Datapath
+Info (12021): Found 2 design units, including 1 entities, in source file Controle.vhd
+    Info (12022): Found design unit 1: Controle-FSM
+    Info (12023): Found entity 1: Controle
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Datapath.vhd(155): used implicit default value for signal "dataEntradaMemInstrucao" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt2" assigned a value but never read
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:Control"
+Warning (10492): VHDL Process Statement warning at Controle.vhd(29): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controle.vhd(30): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ULA_Wrapper" for hierarchy "ULA_Wrapper:ULAUnit"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1"
+Info (12128): Elaborating entity "SumSub" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador"
+Info (12128): Elaborating entity "AndOr" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations"
+Info (12128): Elaborating entity "Mux2x1" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer"
+Info (12128): Elaborating entity "ULA_Control" for hierarchy "ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1"
+Info (12128): Elaborating entity "regInstrucao" for hierarchy "regInstrucao:RegIns"
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output3", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output4", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output5", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output6", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output7", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "addr_Output7[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output7[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output7[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output7[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output7[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output7[5]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[5]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[6]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[7]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[8]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[9]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[10]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[11]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[12]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[13]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[14]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[15]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[16]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[17]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[18]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[19]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[20]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[21]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[22]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[23]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[24]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output6[25]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[5]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[6]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[7]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[8]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[9]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[10]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[11]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[12]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[13]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[14]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output5[15]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output4[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output4[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output4[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output4[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output4[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output3[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output3[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output3[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output3[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output3[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output2[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output2[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output2[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output2[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output2[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[0]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[1]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[2]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[3]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[4]" at regInstrucao.vhd(38)
+Info (10041): Inferred latch for "addr_Output1[5]" at regInstrucao.vhd(38)
+Info (12128): Elaborating entity "memInstrucao" for hierarchy "memInstrucao:MemIns"
+Warning (10492): VHDL Process Statement warning at memInstrucoes.vhd(34): signal "address1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at memInstrucoes.vhd(42): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at memInstrucoes.vhd(42): signal "address1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at memInstrucoes.vhd(38): inferring latch(es) for signal or variable "data_out1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "data_out1[0]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[1]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[2]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[3]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[4]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[5]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[6]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[7]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[8]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[9]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[10]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[11]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[12]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[13]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[14]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[15]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[16]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[17]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[18]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[19]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[20]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[21]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[22]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[23]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[24]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[25]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[26]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[27]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[28]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[29]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[30]" at memInstrucoes.vhd(38)
+Info (10041): Inferred latch for "data_out1[31]" at memInstrucoes.vhd(38)
+Info (12128): Elaborating entity "memDados" for hierarchy "memDados:MemDad"
+Warning (10492): VHDL Process Statement warning at memDados.vhd(44): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at memDados.vhd(45): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "bitsReg" for hierarchy "bitsReg:RegA"
+Info (12128): Elaborating entity "Mux2x1" for hierarchy "Mux2x1:Mux2"
+Info (12128): Elaborating entity "Mux4x1" for hierarchy "Mux4x1:Mux5"
+Info (10041): Inferred latch for "S[0]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[1]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[2]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[3]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[4]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[5]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[6]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[7]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[8]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[9]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[10]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[11]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[12]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[13]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[14]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[15]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[16]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[17]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[18]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[19]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[20]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[21]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[22]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[23]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[24]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[25]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[26]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[27]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[28]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[29]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[30]" at Mux4x1.vhd(20)
+Info (10041): Inferred latch for "S[31]" at Mux4x1.vhd(20)
+Info (12128): Elaborating entity "SignalExtender" for hierarchy "SignalExtender:Extender1"
+Info (12128): Elaborating entity "shiftLeft2" for hierarchy "shiftLeft2:Desloca1"
+Info (12128): Elaborating entity "shiftleft22" for hierarchy "shiftleft22:Desloca2"
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:PC1"
+Warning (10631): VHDL Process Statement warning at ProgramCounter.vhd(17): inferring latch(es) for signal or variable "addr_Output", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "addr_Output[0]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[1]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[2]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[3]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[4]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[5]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[6]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[7]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[8]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[9]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[10]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[11]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[12]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[13]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[14]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[15]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[16]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[17]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[18]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[19]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[20]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[21]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[22]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[23]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[24]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[25]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[26]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[27]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[28]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[29]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[30]" at ProgramCounter.vhd(17)
+Info (10041): Inferred latch for "addr_Output[31]" at ProgramCounter.vhd(17)
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[0]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[1]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[2]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[3]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[4]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[5]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[6]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[7]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[8]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[9]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[10]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[11]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[12]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[13]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[14]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[15]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[16]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[17]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[18]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[19]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[20]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[21]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[22]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[23]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[24]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[25]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[26]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[27]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[28]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[29]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[30]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux6|S[31]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[0]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[1]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[2]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[3]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[4]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[5]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[6]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[7]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[8]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[9]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[10]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[11]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[12]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[13]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[14]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[15]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[16]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[17]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[18]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[19]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[20]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[21]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[22]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[23]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[24]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[25]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[26]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[27]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[28]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[29]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[30]" is permanently enabled
+Warning (14026): LATCH primitive "Mux4x1:Mux5|S[31]" is permanently enabled
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output7[0]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[0]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[0]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[0]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[4]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[4]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output5[4]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[4]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[5]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[5]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output5[5]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[5]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[1]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[1]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output5[1]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[1]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[2]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[2]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output5[2]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[2]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[3]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[3]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output5[3]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output7[3]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[15]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[15]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output4[4]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[15]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[14]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[14]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output4[3]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[14]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[13]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[13]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output4[2]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[13]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[12]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[12]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output4[1]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[12]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[11]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[11]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output4[0]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[11]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[10]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[10]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[9]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[9]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[8]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[8]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[7]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[7]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[6]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output5[6]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[16]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[0]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[17]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[1]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[18]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[2]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[19]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[3]"
+    Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[20]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[4]"
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13012): Latch ProgramCounter:PC1|addr_Output[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 865 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 98 input pins
+    Info (21059): Implemented 181 output pins
+    Info (21061): Implemented 586 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 150 warnings
+    Info: Peak virtual memory: 622 megabytes
+    Info: Processing ended: Sat Nov 16 20:54:44 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
