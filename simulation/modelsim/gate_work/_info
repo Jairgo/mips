@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/work/mips/simulation/modelsim
+Edatapath
+Z1 w1573941265
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 d/work/mips/simulation/modelsim
+Z9 8Datapath.vho
+Z10 FDatapath.vho
+l0
+L34
+VQV1mlBc<gKLL8j?^Z97RO0
+!s100 zVQ5m;>aPhH@jAoQFXhRa3
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1573945142.251623
+Z13 !s90 -reportprogress|300|-93|-work|work|Datapath.vho|
+Z14 !s107 Datapath.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 datapath 0 22 QV1mlBc<gKLL8j?^Z97RO0
+l873
+L345
+Vz:7K6MFVH;e>CiXjDX@zT2
+!s100 =A3zAHi<d_g@JONF9G?f93
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16
