@@ -51,13 +51,13 @@ ARCHITECTURE Behavior OF ULA IS
 BEGIN
 
 	Somador: SumSub generic map (DATA => DATA) port map (signed(A), signed(B), sel(2), s_sum_sub_signed);
-	s_sum_sub <= std_logic_vector(s_sum_sub_signed);
 	BinaryOperations: AndOr generic map (DATA => DATA) port map (A, B, sel(0), s_and_or);
 	Multiplexer: Mux2x1 generic map (N => DATA ) port map (s_and_or, s_sum_sub, sel(1), s_mux);
 	
+	s_sum_sub <= std_logic_vector(s_sum_sub_signed);
 	s_less(31 DOWNTO 1) <= (OTHERS => '0');
 	s_less(0) <= s_mux(31);
 	Result <= s_less when sel = "111" else s_mux;
 	Zero <= '1' when result = c_zeros else '0';
 
-	end Behavior;
+END Behavior;

@@ -74,7 +74,20 @@
 
     \section{Discussão dos resultados}
 
-    Eu preciso completar isso
+    Durante os testes realizados com essa implementação do MIPS, a percepção geral do grupo é que 
+    uma implementação de um sistema digital complexo como um processador exige muito mais do que apenas
+    a descrição do sistema em VHDL (ou outra linguagem de descrição de hardware). É necessário a aplicação
+    de padrões de projeto e metodologias de teste mais ágeis do que o uso de arquivos .do com ModelSim.
+
+    A simulação das instruções implementadas foi a parte mais complicada em questão de complexidade, além
+    de não ter ficado muito claro como é feito o uso do Testbench, o software padrão de simulação da
+    disciplina (ModelSim Altera) tem pouca documentação online e consome quantidades elevadas de recursos
+    de hardware. Quanto maior a simulação, mais hardware consumido, até o ponto onde a simulação não consegue
+    continuar, isso limitou significativament o teste de um bloco grande de instruções e nos levou a optar
+    por executar isoladamente cada instrução implementada.
+
+    Apesar de ser apenas uma versão resumida do MIPS, a implementação realizada contribui com a fixação
+    de conhecimentos adquiridos tanto durante as aulas práticas quanto teóricas.
 
     \section{Conclusões}
 

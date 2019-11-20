@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Datapath
-Sat Nov 16 20:54:44 2019
+Wed Nov 20 03:00:42 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,10 +18,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit
- 13. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1
- 14. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador
- 15. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations
- 16. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer
+ 13. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance
+ 14. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|SumSub:Somador
+ 15. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|AndOr:BinaryOperations
+ 16. Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|Mux2x1:Multiplexer
  17. Parameter Settings for User Entity Instance: memInstrucao:MemIns
  18. Parameter Settings for User Entity Instance: memDados:MemDad
  19. Parameter Settings for User Entity Instance: Mux2x1:Mux1
@@ -61,13 +61,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 20:54:44 2019           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 20 03:00:42 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Datapath                                        ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 554                                             ;
-;     Total combinational functions  ; 456                                             ;
+; Total logic elements               ; 553                                             ;
+;     Total combinational functions  ; 455                                             ;
 ;     Dedicated logic registers      ; 138                                             ;
 ; Total registers                    ; 138                                             ;
 ; Total pins                         ; 279                                             ;
@@ -204,16 +204,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 554   ;
+; Estimated Total logic elements              ; 553   ;
 ;                                             ;       ;
-; Total combinational functions               ; 456   ;
+; Total combinational functions               ; 455   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 175   ;
-;     -- 3 input functions                    ; 271   ;
-;     -- <=2 input functions                  ; 10    ;
+;     -- 4 input functions                    ; 176   ;
+;     -- 3 input functions                    ; 268   ;
+;     -- <=2 input functions                  ; 11    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 394   ;
+;     -- normal mode                          ; 393   ;
 ;     -- arithmetic mode                      ; 62    ;
 ;                                             ;       ;
 ; Total registers                             ; 138   ;
@@ -224,35 +224,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 138   ;
-; Total fan-out                               ; 2000  ;
+; Total fan-out                               ; 1997  ;
 ; Average fan-out                             ; 2.29  ;
 +---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                        ; Library Name ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
-; |Datapath                      ; 456 (14)          ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 279  ; 0            ; |Datapath                                                  ; work         ;
-;    |Controle:Control|          ; 26 (26)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Controle:Control                                 ; work         ;
-;    |Mux2x1:Mux2|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux2                                      ; work         ;
-;    |Mux2x1:Mux3|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux3                                      ; work         ;
-;    |Mux2x1:Mux4|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux4                                      ; work         ;
-;    |Mux4x1:Mux5|               ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux5                                      ; work         ;
-;    |Mux4x1:Mux6|               ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux6                                      ; work         ;
-;    |ProgramCounter:PC1|        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ProgramCounter:PC1                               ; work         ;
-;    |ULA_Wrapper:ULAUnit|       ; 173 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit                              ; work         ;
-;       |ULA:ula_1|              ; 169 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1                    ; work         ;
-;          |Mux2x1:Multiplexer|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer ; work         ;
-;          |SumSub:Somador|      ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador     ; work         ;
-;       |ULA_Control:ula_ctrl_1| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1       ; work         ;
-;    |bitsReg:RegA|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegA                                     ; work         ;
-;    |bitsReg:RegB|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegB                                     ; work         ;
-;    |bitsReg:RegDados|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegDados                                 ; work         ;
-;    |bitsReg:RegULASaida|       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegULASaida                              ; work         ;
-;    |regInstrucao:RegIns|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|regInstrucao:RegIns                              ; work         ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |Datapath                              ; 455 (14)          ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 279  ; 0            ; |Datapath                                                        ; work         ;
+;    |Controle:Control|                  ; 25 (25)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Controle:Control                                       ; work         ;
+;    |Mux2x1:Mux2|                       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux2                                            ; work         ;
+;    |Mux2x1:Mux3|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux3                                            ; work         ;
+;    |Mux2x1:Mux4|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux4                                            ; work         ;
+;    |Mux4x1:Mux5|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux5                                            ; work         ;
+;    |Mux4x1:Mux6|                       ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux6                                            ; work         ;
+;    |ProgramCounter:PC1|                ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ProgramCounter:PC1                                     ; work         ;
+;    |ULA_Wrapper:ULAUnit|               ; 173 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit                                    ; work         ;
+;       |ULA:UlaInstance|                ; 169 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance                    ; work         ;
+;          |Mux2x1:Multiplexer|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|Mux2x1:Multiplexer ; work         ;
+;          |SumSub:Somador|              ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|SumSub:Somador     ; work         ;
+;       |ULA_Control:UlaControlInstance| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:UlaControlInstance     ; work         ;
+;    |bitsReg:RegA|                      ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegA                                           ; work         ;
+;    |bitsReg:RegB|                      ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegB                                           ; work         ;
+;    |bitsReg:RegDados|                  ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegDados                                       ; work         ;
+;    |bitsReg:RegULASaida|               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|bitsReg:RegULASaida                                    ; work         ;
+;    |regInstrucao:RegIns|               ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|regInstrucao:RegIns                                    ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -396,21 +396,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[22]                               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1|Mux3 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[0]                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                      ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[12]                               ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[28]                               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[0]                                ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA:ula_1|Result[1]         ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[22]                                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:UlaControlInstance|Mux3 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[0]                                        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                              ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[12]                                       ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[28]                                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[0]                                        ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|Result[1]           ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -423,43 +423,43 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; data           ; 32    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; data           ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; data           ; 32    ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|SumSub:Somador ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; data           ; 32    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; data           ; 32    ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|AndOr:BinaryOperations ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; data           ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer ;
-+----------------+-------+----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                 ;
-+----------------+-------+----------------------------------------------------------------------+
-; n              ; 32    ; Signed Integer                                                       ;
-+----------------+-------+----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA_Wrapper:ULAUnit|ULA:UlaInstance|Mux2x1:Multiplexer ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -599,17 +599,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 16 20:54:41 2019
+    Info: Processing started: Wed Nov 20 03:00:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c Datapath
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12019): Can't analyze file -- file Components/ULAWrapper.vhd is missing
+Warning (12019): Can't analyze file -- file Components/ULAControle.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file Components/AndOr.vhd
     Info (12022): Found design unit 1: AndOr-Behavior
     Info (12023): Found entity 1: AndOr
 Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA_Wrapper.vhd
-    Info (12022): Found design unit 1: ULA_Wrapper-behavior
+    Info (12022): Found design unit 1: ULA_Wrapper-Behavior
     Info (12023): Found entity 1: ULA_Wrapper
 Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA_Control.vhd
-    Info (12022): Found design unit 1: ULA_Control-behavior
+    Info (12022): Found design unit 1: ULA_Control-Behavior
     Info (12023): Found entity 1: ULA_Control
 Info (12021): Found 2 design units, including 1 entities, in source file Components/ULA.vhd
     Info (12022): Found design unit 1: ULA-Behavior
@@ -669,14 +671,14 @@ Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp"
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt2" assigned a value but never read
 Info (12128): Elaborating entity "Controle" for hierarchy "Controle:Control"
-Warning (10492): VHDL Process Statement warning at Controle.vhd(29): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Controle.vhd(30): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controle.vhd(36): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controle.vhd(37): signal "currentState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "ULA_Wrapper" for hierarchy "ULA_Wrapper:ULAUnit"
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1"
-Info (12128): Elaborating entity "SumSub" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|SumSub:Somador"
-Info (12128): Elaborating entity "AndOr" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|AndOr:BinaryOperations"
-Info (12128): Elaborating entity "Mux2x1" for hierarchy "ULA_Wrapper:ULAUnit|ULA:ula_1|Mux2x1:Multiplexer"
-Info (12128): Elaborating entity "ULA_Control" for hierarchy "ULA_Wrapper:ULAUnit|ULA_Control:ula_ctrl_1"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA_Wrapper:ULAUnit|ULA:UlaInstance"
+Info (12128): Elaborating entity "SumSub" for hierarchy "ULA_Wrapper:ULAUnit|ULA:UlaInstance|SumSub:Somador"
+Info (12128): Elaborating entity "AndOr" for hierarchy "ULA_Wrapper:ULAUnit|ULA:UlaInstance|AndOr:BinaryOperations"
+Info (12128): Elaborating entity "Mux2x1" for hierarchy "ULA_Wrapper:ULAUnit|ULA:UlaInstance|Mux2x1:Multiplexer"
+Info (12128): Elaborating entity "ULA_Control" for hierarchy "ULA_Wrapper:ULAUnit|ULA_Control:UlaControlInstance"
 Info (12128): Elaborating entity "regInstrucao" for hierarchy "regInstrucao:RegIns"
 Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output1", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at regInstrucao.vhd(38): inferring latch(es) for signal or variable "addr_Output2", which holds its previous value in one or more paths through the process
@@ -1029,13 +1031,13 @@ Warning (13012): Latch ProgramCounter:PC1|addr_Output[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 865 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 864 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 98 input pins
     Info (21059): Implemented 181 output pins
-    Info (21061): Implemented 586 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 150 warnings
-    Info: Peak virtual memory: 622 megabytes
-    Info: Processing ended: Sat Nov 16 20:54:44 2019
+    Info (21061): Implemented 585 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 152 warnings
+    Info: Peak virtual memory: 626 megabytes
+    Info: Processing ended: Wed Nov 20 03:00:42 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

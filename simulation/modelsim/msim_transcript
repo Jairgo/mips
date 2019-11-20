@@ -1,74 +1,258 @@
-# do Datapath_run_msim_gate_vhdl.do 
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
+# do Datapath_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
 # }
-# vlib gate_work
-# vmap work gate_work
+# vlib rtl_work
+# vmap work rtl_work
 # Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {Datapath.vho}
+# vcom -93 -work work {/work/mips/Components/AndOr.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneii_atom_pack
-# -- Loading package cycloneii_components
+# -- Loading package NUMERIC_STD
+# -- Compiling entity AndOr
+# -- Compiling architecture Behavior of AndOr
+# vcom -93 -work work {/work/mips/Components/ULA_Wrapper.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA_Wrapper
+# -- Compiling architecture Behavior of ULA_Wrapper
+# ** Warning: /work/mips/Components/ULA_Wrapper.vhd(43): Cannot associate port "Result" of mode BUFFER with port "Result" of mode OUT.
+# vcom -93 -work work {/work/mips/Components/ULA_Control.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA_Control
+# -- Compiling architecture Behavior of ULA_Control
+# vcom -93 -work work {/work/mips/Components/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture Behavior of ULA
+# vcom -93 -work work {/work/mips/Components/SumSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SumSub
+# -- Compiling architecture Behavior of SumSub
+# vcom -93 -work work {/work/mips/Components/SignalExtender.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SignalExtender
+# -- Compiling architecture Behavior of SignalExtender
+# vcom -93 -work work {/work/mips/Components/shiftleft22.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity shiftleft22
+# -- Compiling architecture Behavior of shiftleft22
+# vcom -93 -work work {/work/mips/Components/shiftLeft2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity shiftLeft2
+# -- Compiling architecture Behavior of shiftLeft2
+# vcom -93 -work work {/work/mips/Components/regInstrucao.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity regInstrucao
+# -- Compiling architecture behavior of regInstrucao
+# vcom -93 -work work {/work/mips/Components/ProgramCounter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ProgramCounter
+# -- Compiling architecture Behavior of ProgramCounter
+# vcom -93 -work work {/work/mips/Components/Mux4x1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Mux4x1
+# -- Compiling architecture behavior of Mux4x1
+# vcom -93 -work work {/work/mips/Components/Mux2x1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Mux2x1
+# -- Compiling architecture behavior of Mux2x1
+# vcom -93 -work work {/work/mips/Components/memInstrucoes.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memInstrucao
+# -- Compiling architecture rtl of memInstrucao
+# vcom -93 -work work {/work/mips/Components/memDados.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memDados
+# -- Compiling architecture rtl of memDados
+# vcom -93 -work work {/work/mips/Components/bitsReg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity bitsReg
+# -- Compiling architecture behavior of bitsReg
+# vcom -93 -work work {/work/mips/Datapath.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Datapath
-# -- Compiling architecture structure of Datapath
+# -- Compiling architecture Behavior of Datapath
+# vcom -93 -work work {/work/mips/Controle.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Controle
+# -- Compiling architecture FSM of Controle
 # 
 vsim -voptargs=+acc work.datapath
 # vsim -voptargs=+acc work.datapath 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.datapath(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
 # Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.datapath(behavior)
+# Loading work.controle(fsm)
+# Loading ieee.numeric_std(body)
+# Loading work.ula_wrapper(behavior)
+# Loading work.ula(behavior)
+# Loading work.sumsub(behavior)
+# Loading work.andor(behavior)
+# Loading work.mux2x1(behavior)
+# Loading work.ula_control(behavior)
+# Loading work.reginstrucao(behavior)
+# Loading work.meminstrucao(rtl)
+# Loading work.memdados(rtl)
+# Loading work.bitsreg(behavior)
+# Loading work.mux4x1(behavior)
+# Loading work.signalextender(behavior)
+# Loading work.shiftleft2(behavior)
+# Loading work.shiftleft22(behavior)
+# Loading work.programcounter(behavior)
 add wave  \
-sim:/datapath/clock \
-sim:/datapath/reset \
-sim:/datapath/i_in \
+sim:/datapath/EscMem \
+sim:/datapath/EscReg \
+sim:/datapath/FontePC \
+sim:/datapath/IREsc \
+sim:/datapath/IouD \
+sim:/datapath/LerMem \
+sim:/datapath/MemParaReg \
+sim:/datapath/PCEsc \
+sim:/datapath/PCEscCond \
+sim:/datapath/RegAULA \
+sim:/datapath/RegBULA \
+sim:/datapath/RegDst \
+sim:/datapath/Result \
+sim:/datapath/ULAFonteA \
+sim:/datapath/ULAFonteB \
+sim:/datapath/ULAOp \
+sim:/datapath/Zero \
+sim:/datapath/addressIn \
+sim:/datapath/clock
+add wave  \
+sim:/datapath/i_in
+add wave  \
 sim:/datapath/i_dt1 \
-sim:/datapath/i_dt2 \
-sim:/datapath/dbg_ULAFonteA \
-sim:/datapath/dbg_EscReg \
-sim:/datapath/dbg_RegDst \
-sim:/datapath/dbg_PCEscCond \
-sim:/datapath/dbg_PCEsc \
-sim:/datapath/dbg_IouD \
-sim:/datapath/dbg_LerMem \
-sim:/datapath/dbg_EscMem \
-sim:/datapath/dbg_MemParaReg \
-sim:/datapath/dbg_IREsc \
-sim:/datapath/dbg_FontePC \
-sim:/datapath/dbg_ULAOp \
-sim:/datapath/dbg_ULAFonteB \
-sim:/datapath/dbg_instruction \
-sim:/datapath/dbg_dt_saida \
-sim:/datapath/dbg_data_3_EntradaMemDados \
-sim:/datapath/dbg_regRd_Mux \
-sim:/datapath/dbg_entradaPC \
-sim:/datapath/dbg_saidaPC
+sim:/datapath/i_dt2
 do /work/mips/Estimulos/add.do
 run
-# ** Error: (vsim-3601) Iteration limit reached at time 1400 ns.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/MemDad
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/MemDad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/MemDad
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/MemDad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemDad
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemDad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemDad
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemDad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemIns
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/MemIns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /datapath/MemIns
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /datapath/MemIns
+run
+run
+run
+run
+run
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1400 ns  Iteration: 2  Instance: /datapath/MemIns
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 1400 ns  Iteration: 2  Instance: /datapath/MemIns
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3 us  Iteration: 2  Instance: /datapath/MemIns
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 3 us  Iteration: 2  Instance: /datapath/MemIns
+run
+run
+run

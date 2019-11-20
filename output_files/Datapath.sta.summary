@@ -3,48 +3,48 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clock'
-Slack : -16.567
-TNS   : -518.016
+Slack : -17.335
+TNS   : -538.910
 
 Type  : Slow Model Setup 'Controle:Control|currentState.S0'
-Slack : -15.766
-TNS   : -466.277
+Slack : -16.414
+TNS   : -483.126
 
 Type  : Slow Model Hold 'Controle:Control|currentState.S0'
-Slack : -12.036
-TNS   : -360.062
+Slack : -12.831
+TNS   : -380.000
 
 Type  : Slow Model Hold 'clock'
-Slack : -1.645
-TNS   : -15.265
+Slack : -1.949
+TNS   : -12.007
 
 Type  : Slow Model Minimum Pulse Width 'Controle:Control|currentState.S0'
-Slack : -7.934
-TNS   : -3830.646
+Slack : -8.596
+TNS   : -4450.048
 
 Type  : Slow Model Minimum Pulse Width 'clock'
 Slack : -1.380
 TNS   : -139.380
 
 Type  : Fast Model Setup 'clock'
-Slack : -7.027
-TNS   : -213.814
+Slack : -7.399
+TNS   : -223.155
 
 Type  : Fast Model Setup 'Controle:Control|currentState.S0'
-Slack : -6.793
-TNS   : -198.074
+Slack : -7.079
+TNS   : -205.387
 
 Type  : Fast Model Hold 'Controle:Control|currentState.S0'
-Slack : -5.724
-TNS   : -171.403
+Slack : -6.101
+TNS   : -181.156
 
 Type  : Fast Model Hold 'clock'
-Slack : -0.954
-TNS   : -22.139
+Slack : -1.172
+TNS   : -21.144
 
 Type  : Fast Model Minimum Pulse Width 'Controle:Control|currentState.S0'
-Slack : -3.298
-TNS   : -1367.212
+Slack : -3.530
+TNS   : -1601.306
 
 Type  : Fast Model Minimum Pulse Width 'clock'
 Slack : -1.380

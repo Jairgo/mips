@@ -8,13 +8,13 @@ ENTITY Datapath IS
 		clock, reset : IN std_logic;
 		i_in : IN std_logic_vector(31 DOWNTO 0);
 		i_dt1, i_dt2 : IN std_logic_vector(31 DOWNTO 0);
-		dbg_ULAFonteA, dbg_EscReg, dbg_RegDst, dbg_PCEscCond, dbg_PCEsc, dbg_IouD, dbg_LerMem, dbg_EscMem, dbg_MemParaReg, dbg_IREsc : OUT std_logic;
-		dbg_FontePC, dbg_ULAOp, dbg_ULAFonteB : OUT std_logic_vector(1 DOWNTO 0);
-		dbg_instruction : OUT std_logic_vector(31 DOWNTO 0);
-		dbg_dt_saida : OUT std_logic_vector(31 DOWNTO 0);
-		dbg_data_3_EntradaMemDados : OUT std_logic_vector(31 DOWNTO 0);
-		dbg_regRd_Mux : OUT std_logic_vector(4 DOWNTO 0);
-		dbg_entradaPC, dbg_saidaPC : OUT std_logic_vector(31 DOWNTO 0)
+		control_ULAFonteA, control_EscReg, control_RegDst, control_PCEscCond, control_PCEsc, control_IouD, control_LerMem, control_EscMem, control_MemParaReg, control_IREsc : OUT std_logic;
+		control_FontePC, control_ULAOp, control_ULAFonteB : OUT std_logic_vector(1 DOWNTO 0);
+		control_instruction : OUT std_logic_vector(31 DOWNTO 0);
+		control_dt_saida : OUT std_logic_vector(31 DOWNTO 0);
+		control_data_3_EntradaMemDados : OUT std_logic_vector(31 DOWNTO 0);
+		control_regRd_Mux : OUT std_logic_vector(4 DOWNTO 0);
+		control_entradaPC, control_saidaPC : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END Datapath;
   
@@ -184,25 +184,25 @@ ARCHITECTURE Behavior OF Datapath IS
 	
 	begin
 	
-		dbg_ULAFonteA <= ULAFonteA;
-		dbg_EscReg <= EscReg;
-		dbg_RegDst <= RegDst;
-		dbg_PCEscCond <= PCEscCond;
-		dbg_PCEsc <= PCEsc;
-		dbg_IouD <= IouD;
-		dbg_LerMem <= LerMem;
-		dbg_EscMem <= EscMem;
-		dbg_MemParaReg <= MemParaReg;
-		dbg_IREsc <= IREsc;
-		dbg_FontePC <= FontePC;
-		dbg_ULAOp <= ULAOp;
-		dbg_ULAFonteB <= ULAFonteB;
-		dbg_instruction <= dataSaidaMemInstrucao;
-		dbg_dt_saida <= Result;
-		dbg_data_3_EntradaMemDados <= data_3_EntradaMemDados;
-		dbg_regRd_Mux <= regRd_Mux;
-		dbg_entradaPC <= entradaPC;
-		dbg_saidaPC <= saidaPC;
+		control_ULAFonteA <= ULAFonteA;
+		control_EscReg <= EscReg;
+		control_RegDst <= RegDst;
+		control_PCEscCond <= PCEscCond;
+		control_PCEsc <= PCEsc;
+		control_IouD <= IouD;
+		control_LerMem <= LerMem;
+		control_EscMem <= EscMem;
+		control_MemParaReg <= MemParaReg;
+		control_IREsc <= IREsc;
+		control_FontePC <= FontePC;
+		control_ULAOp <= ULAOp;
+		control_ULAFonteB <= ULAFonteB;
+		control_instruction <= dataSaidaMemInstrucao;
+		control_dt_saida <= Result;
+		control_data_3_EntradaMemDados <= data_3_EntradaMemDados;
+		control_regRd_Mux <= regRd_Mux;
+		control_entradaPC <= entradaPC;
+		control_saidaPC <= saidaPC;
 	
 		writeEnablePC <= (PCEscCond and Zero) or PCEsc;
 		desvioJ(27 DOWNTO 0) <= saidaDeslocador2;

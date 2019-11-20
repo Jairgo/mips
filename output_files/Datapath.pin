@@ -70,44 +70,44 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 GND                          : A2        : gnd    :                   :         :           :                
 VCCIO3                       : A3        : power  :                   : 3.3V    : 3         :                
-dbg_saidaPC[11]              : A4        : output : 3.3-V LVTTL       :         : 3         : N              
-i_dt1[18]                    : A5        : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[13] : A6        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[4]               : A7        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[26]            : A8        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[17]            : A9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[29] : A10       : output : 3.3-V LVTTL       :         : 3         : N              
+i_in[12]                     : A4        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_instruction[25]      : A5        : output : 3.3-V LVTTL       :         : 3         : N              
+control_instruction[10]      : A6        : output : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[15]          : A7        : output : 3.3-V LVTTL       :         : 3         : N              
+control_entradaPC[10]        : A8        : output : 3.3-V LVTTL       :         : 3         : N              
+control_ULAFonteB[1]         : A9        : output : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[8]           : A10       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
-i_in[14]                     : A14       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[1]       : A14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
-i_in[12]                     : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : A18       :        :                   :         : 4         :                
-GND*                         : A19       :        :                   :         : 4         :                
-GND*                         : A20       :        :                   :         : 4         :                
+i_dt2[9]                     : A17       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_saidaPC[5]           : A18       : output : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[20]      : A19       : output : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[8]       : A20       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : A21       :        :                   :         : 4         :                
 GND*                         : A22       :        :                   :         : 4         :                
 GND*                         : A23       :        :                   :         : 4         :                
 VCCIO4                       : A24       : power  :                   : 3.3V    : 4         :                
 GND                          : A25       : gnd    :                   :         :           :                
-dbg_regRd_Mux[4]             : AA1       : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[11]                    : AA2       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[24]                    : AA3       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[28]                    : AA4       : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_entradaPC[22]            : AA5       : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[22]                    : AA6       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[20]                    : AA7       : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[21]         : AA1       : output : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[19]      : AA2       : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[4]                     : AA3       : input  : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[16]      : AA4       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AA5       :        :                   :         : 1         :                
+GND*                         : AA6       :        :                   :         : 1         :                
+GND*                         : AA7       :        :                   :         : 1         :                
 VCCA_PLL1                    : AA8       : power  :                   : 1.2V    :           :                
-dbg_dt_saida[2]              : AA9       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[27]            : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[16]            : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[25]              : AA12      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_instruction[31]          : AA13      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_entradaPC[24]            : AA14      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[20]          : AA15      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[27]          : AA16      : output : 3.3-V LVTTL       :         : 7         : N              
+control_data_3_EntradaMemDados[26] : AA9       : output : 3.3-V LVTTL       :         : 8         : N              
+control_dt_saida[19]         : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[25]        : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[31]                    : AA12      : input  : 3.3-V LVTTL       :         : 8         : N              
+i_dt1[29]                    : AA13      : input  : 3.3-V LVTTL       :         : 7         : N              
+control_saidaPC[3]           : AA14      : output : 3.3-V LVTTL       :         : 7         : N              
+control_instruction[7]       : AA15      : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AA16      :        :                   :         : 7         :                
 GND*                         : AA17      :        :                   :         : 7         :                
 GND*                         : AA18      :        :                   :         : 7         :                
 VCCA_PLL4                    : AA19      : power  :                   : 1.2V    :           :                
@@ -118,21 +118,21 @@ GND*                         : AA23      :        :                   :         
 GND*                         : AA24      :        :                   :         : 6         :                
 GND*                         : AA25      :        :                   :         : 6         :                
 GND*                         : AA26      :        :                   :         : 6         :                
-i_dt2[18]                    : AB1       : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[28]              : AB2       : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_data_3_EntradaMemDados[20] : AB3       : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[19]                    : AB4       : input  : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[16]        : AB1       : output : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[9]           : AB2       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AB3       :        :                   :         : 1         :                
+GND*                         : AB4       :        :                   :         : 1         :                
 VCCIO1                       : AB5       : power  :                   : 3.3V    : 1         :                
 VCCIO8                       : AB6       : power  :                   : 3.3V    : 8         :                
 GND                          : AB7       : gnd    :                   :         :           :                
-dbg_saidaPC[26]              : AB8       : output : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[19]        : AB8       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AB9       : power  :                   : 3.3V    : 8         :                
-i_dt2[2]                     : AB10      : input  : 3.3-V LVTTL       :         : 8         : N              
+control_data_3_EntradaMemDados[27] : AB10      : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : AB11      : gnd    :                   :         :           :                
-dbg_data_3_EntradaMemDados[24] : AB12      : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[28]                    : AB12      : input  : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AB13      : power  :                   : 3.3V    : 8         :                
 VCCIO7                       : AB14      : power  :                   : 3.3V    : 7         :                
-dbg_instruction[10]          : AB15      : output : 3.3-V LVTTL       :         : 7         : N              
+control_regRd_Mux[4]         : AB15      : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AB16      : gnd    :                   :         :           :                
 VCCIO7                       : AB17      : power  :                   : 3.3V    : 7         :                
 GND*                         : AB18      :        :                   :         : 7         :                
@@ -144,23 +144,23 @@ GND*                         : AB23      :        :                   :         
 GND*                         : AB24      :        :                   :         : 6         :                
 GND*                         : AB25      :        :                   :         : 6         :                
 GND*                         : AB26      :        :                   :         : 6         :                
-dbg_entradaPC[28]            : AC1       : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[30]                    : AC2       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[29]                    : AC3       : input  : 3.3-V LVTTL       :         : 1         : N              
+i_in[16]                     : AC1       : input  : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[26]        : AC2       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AC3       :        :                   :         : 1         :                
 GND                          : AC4       : gnd    :                   :         :           :                
-dbg_data_3_EntradaMemDados[10] : AC5       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[11]            : AC6       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[14]              : AC7       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[1]              : AC8       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_data_3_EntradaMemDados[25] : AC9       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[21]                    : AC10      : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[24]              : AC11      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[25]            : AC12      : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AC5       :        :                   :         : 8         :                
+GND*                         : AC6       :        :                   :         : 8         :                
+i_dt1[20]                    : AC7       : input  : 3.3-V LVTTL       :         : 8         : N              
+control_data_3_EntradaMemDados[20] : AC8       : output : 3.3-V LVTTL       :         : 8         : N              
+control_regRd_Mux[1]         : AC9       : output : 3.3-V LVTTL       :         : 8         : N              
+control_dt_saida[24]         : AC10      : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[30]                    : AC11      : input  : 3.3-V LVTTL       :         : 8         : N              
+control_saidaPC[23]          : AC12      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AC13      :        :                   :         : 8         :                
-i_in[31]                     : AC14      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_in[10]                     : AC15      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_in[4]                      : AC16      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_in[16]                     : AC17      : input  : 3.3-V LVTTL       :         : 7         : N              
+i_dt1[28]                    : AC14      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AC15      :        :                   :         : 7         :                
+control_instruction[14]      : AC16      : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AC17      :        :                   :         : 7         :                
 GND*                         : AC18      :        :                   :         : 7         :                
 GND*                         : AC19      :        :                   :         : 7         :                
 GND*                         : AC20      :        :                   :         : 7         :                
@@ -171,21 +171,21 @@ NC                           : AC24      :        :                   :         
 GND*                         : AC25      :        :                   :         : 6         :                
 GND*                         : AC26      :        :                   :         : 6         :                
 VCCIO1                       : AD1       : power  :                   : 3.3V    : 1         :                
-i_dt2[25]                    : AD2       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[27]                    : AD3       : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[12]             : AD4       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt2[1]                     : AD5       : input  : 3.3-V LVTTL       :         : 8         : N              
-i_dt2[5]                     : AD6       : input  : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[0]                     : AD7       : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[3]             : AD8       : output : 3.3-V LVTTL       :         : 8         : N              
+i_in[21]                     : AD2       : input  : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[21]      : AD3       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : AD4       :        :                   :         : 8         :                
+GND*                         : AD5       :        :                   :         : 8         :                
+GND*                         : AD6       :        :                   :         : 8         :                
+GND*                         : AD7       :        :                   :         : 8         :                
+control_data_3_EntradaMemDados[19] : AD8       : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : AD9       : gnd    :                   :         :           :                
-i_dt1[27]                    : AD10      : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_data_3_EntradaMemDados[4] : AD11      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[16]              : AD12      : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[18]                    : AD10      : input  : 3.3-V LVTTL       :         : 8         : N              
+control_dt_saida[1]          : AD11      : output : 3.3-V LVTTL       :         : 8         : N              
+control_dt_saida[4]          : AD12      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AD13      :        :                   :         : 8         :                
 GND                          : AD14      : gnd    :                   :         :           :                
-dbg_saidaPC[21]              : AD15      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[4]           : AD16      : output : 3.3-V LVTTL       :         : 7         : N              
+control_data_3_EntradaMemDados[22] : AD15      : output : 3.3-V LVTTL       :         : 7         : N              
+control_instruction[22]      : AD16      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AD17      :        :                   :         : 7         :                
 GND                          : AD18      : gnd    :                   :         :           :                
 GND*                         : AD19      :        :                   :         : 7         :                
@@ -197,23 +197,23 @@ GND*                         : AD24      :        :                   :         
 GND*                         : AD25      :        :                   :         : 6         :                
 VCCIO6                       : AD26      : power  :                   : 3.3V    : 6         :                
 GND                          : AE1       : gnd    :                   :         :           :                
-i_dt2[26]                    : AE2       : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[17]                    : AE3       : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_entradaPC[7]             : AE4       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[8]              : AE5       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[27]              : AE6       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[3]                     : AE7       : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_data_3_EntradaMemDados[16] : AE8       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_data_3_EntradaMemDados[27] : AE9       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[26]             : AE10      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[1]               : AE11      : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_instruction[5]           : AE12      : output : 3.3-V LVTTL       :         : 8         : N              
-i_in[5]                      : AE13      : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AE2       :        :                   :         : 1         :                
+GND*                         : AE3       :        :                   :         : 1         :                
+GND*                         : AE4       :        :                   :         : 8         :                
+GND*                         : AE5       :        :                   :         : 8         :                
+control_data_3_EntradaMemDados[25] : AE6       : output : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[12]        : AE7       : output : 3.3-V LVTTL       :         : 8         : N              
+control_data_3_EntradaMemDados[17] : AE8       : output : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[13]        : AE9       : output : 3.3-V LVTTL       :         : 8         : N              
+control_saidaPC[4]           : AE10      : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt1[13]                    : AE11      : input  : 3.3-V LVTTL       :         : 8         : N              
+control_dt_saida[29]         : AE12      : output : 3.3-V LVTTL       :         : 8         : N              
+control_saidaPC[29]          : AE13      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AE14      :        :                   :         : 7         :                
-dbg_dt_saida[3]              : AE15      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[22]          : AE16      : output : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[11]          : AE17      : output : 3.3-V LVTTL       :         : 7         : N              
-i_in[27]                     : AE18      : input  : 3.3-V LVTTL       :         : 7         : N              
+control_saidaPC[22]          : AE15      : output : 3.3-V LVTTL       :         : 7         : N              
+i_in[7]                      : AE16      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AE17      :        :                   :         : 7         :                
+GND*                         : AE18      :        :                   :         : 7         :                
 GND*                         : AE19      :        :                   :         : 7         :                
 GND*                         : AE20      :        :                   :         : 7         :                
 GND*                         : AE21      :        :                   :         : 7         :                
@@ -224,21 +224,21 @@ GND*                         : AE25      :        :                   :         
 GND                          : AE26      : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
 VCCIO8                       : AF3       : power  :                   : 3.3V    : 8         :                
-dbg_dt_saida[7]              : AF4       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[8]               : AF5       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_saidaPC[3]               : AF6       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[4]                     : AF7       : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_IouD                     : AF8       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[25]             : AF9       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[24]             : AF10      : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AF4       :        :                   :         : 8         :                
+GND*                         : AF5       :        :                   :         : 8         :                
+control_dt_saida[27]         : AF6       : output : 3.3-V LVTTL       :         : 8         : N              
+control_regRd_Mux[0]         : AF7       : output : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[17]        : AF8       : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[19]                    : AF9       : input  : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[4]         : AF10      : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : AF11      : power  :                   : 3.3V    : 8         :                
 GND                          : AF12      : gnd    :                   :         :           :                
-i_dt1[24]                    : AF13      : input  : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[29]        : AF13      : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : AF14      :        :                   :         : 7         :                
 GND                          : AF15      : gnd    :                   :         :           :                
 VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
-i_in[11]                     : AF17      : input  : 3.3-V LVTTL       :         : 7         : N              
-i_in[7]                      : AF18      : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AF17      :        :                   :         : 7         :                
+GND*                         : AF18      :        :                   :         : 7         :                
 GND*                         : AF19      :        :                   :         : 7         :                
 GND*                         : AF20      :        :                   :         : 7         :                
 GND*                         : AF21      :        :                   :         : 7         :                
@@ -247,25 +247,25 @@ GND*                         : AF23      :        :                   :         
 VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
 GND                          : B1        : gnd    :                   :         :           :                
-dbg_dt_saida[6]              : B2        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_saidaPC[20]              : B3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_saidaPC[12]              : B4        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_dt_saida[19]             : B5        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[31]            : B6        : output : 3.3-V LVTTL       :         : 3         : N              
-i_dt1[14]                    : B7        : input  : 3.3-V LVTTL       :         : 3         : N              
-i_dt1[16]                    : B8        : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[15] : B9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_dt_saida[27]             : B10       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[18]          : B11       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[0]           : B12       : output : 3.3-V LVTTL       :         : 3         : N              
+control_instruction[9]       : B2        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B3        :        :                   :         : 2         :                
+control_instruction[18]      : B4        : output : 3.3-V LVTTL       :         : 3         : N              
+i_in[25]                     : B5        : input  : 3.3-V LVTTL       :         : 3         : N              
+i_in[18]                     : B6        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_dt_saida[16]         : B7        : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[9] : B8        : output : 3.3-V LVTTL       :         : 3         : N              
+control_PCEsc                : B9        : output : 3.3-V LVTTL       :         : 3         : N              
+control_entradaPC[8]         : B10       : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[2] : B11       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt2[10]                    : B12       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : B13       :        :                   :         : 4         :                
-dbg_instruction[14]          : B14       : output : 3.3-V LVTTL       :         : 4         : N              
-i_in[25]                     : B15       : input  : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[17]          : B16       : output : 3.3-V LVTTL       :         : 4         : N              
-i_in[8]                      : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : B18       :        :                   :         : 4         :                
-GND*                         : B19       :        :                   :         : 4         :                
-GND*                         : B20       :        :                   :         : 4         :                
+control_FontePC[1]           : B14       : output : 3.3-V LVTTL       :         : 4         : N              
+control_entradaPC[22]        : B15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_dt1[31]                    : B16       : input  : 3.3-V LVTTL       :         : 4         : N              
+i_in[11]                     : B17       : input  : 3.3-V LVTTL       :         : 4         : N              
+i_dt1[12]                    : B18       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[24]      : B19       : output : 3.3-V LVTTL       :         : 4         : N              
+i_in[8]                      : B20       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : B21       :        :                   :         : 4         :                
 GND*                         : B22       :        :                   :         : 4         :                
 GND*                         : B23       :        :                   :         : 4         :                
@@ -273,24 +273,24 @@ GND*                         : B24       :        :                   :         
 GND*                         : B25       :        :                   :         : 5         :                
 GND                          : B26       : gnd    :                   :         :           :                
 VCCIO2                       : C1        : power  :                   : 3.3V    : 2         :                
-dbg_instruction[6]           : C2        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[7]                     : C3        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[9]                     : C4        : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[13]              : C5        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[7]               : C6        : output : 3.3-V LVTTL       :         : 3         : N              
-i_dt1[15]                    : C7        : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[30] : C8        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[2]               : C9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[21] : C10       : output : 3.3-V LVTTL       :         : 3         : N              
-i_in[18]                     : C11       : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[1]           : C12       : output : 3.3-V LVTTL       :         : 3         : N              
+control_instruction[31]      : C2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_instruction[3]       : C3        : output : 3.3-V LVTTL       :         : 2         : N              
+i_in[10]                     : C4        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_instruction[12]      : C5        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : C6        :        :                   :         : 3         :                
+control_LerMem               : C7        : output : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[11]          : C8        : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[16]                    : C9        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[12]          : C10       : output : 3.3-V LVTTL       :         : 3         : N              
+control_IREsc                : C11       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt2[17]                    : C12       : input  : 3.3-V LVTTL       :         : 3         : N              
 i_in[0]                      : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
-i_in[17]                     : C15       : input  : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[25]          : C16       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : C17       :        :                   :         : 4         :                
+control_entradaPC[1]         : C15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_dt1[1]                     : C16       : input  : 3.3-V LVTTL       :         : 4         : N              
+i_dt1[11]                    : C17       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : C18       : gnd    :                   :         :           :                
-GND*                         : C19       :        :                   :         : 4         :                
+i_in[20]                     : C19       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : C20       : power  :                   : 3.3V    : 4         :                
 GND*                         : C21       :        :                   :         : 4         :                
 GND*                         : C22       :        :                   :         : 4         :                
@@ -298,25 +298,25 @@ GND*                         : C23       :        :                   :         
 GND*                         : C24       :        :                   :         : 5         :                
 GND*                         : C25       :        :                   :         : 5         :                
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
-dbg_instruction[3]           : D1        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_saidaPC[19]              : D2        : output : 3.3-V LVTTL       :         : 2         : N              
+i_in[31]                     : D1        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt1[7]                     : D2        : input  : 3.3-V LVTTL       :         : 2         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : D4        : gnd    :                   :         :           :                
-i_dt1[13]                    : D5        : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[14] : D6        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_dt_saida[30]             : D7        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[28] : D8        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_dt_saida[21]             : D9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[2] : D10       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[15]              : D11       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[1]             : D12       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[27]                    : D5        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_entradaPC[21]        : D6        : output : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[19]          : D7        : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[0]                     : D8        : input  : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[30]                    : D9        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[10]          : D10       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[8]                     : D11       : input  : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[2]           : D12       : output : 3.3-V LVTTL       :         : 3         : N              
 i_in[1]                      : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[30]            : D14       : output : 3.3-V LVTTL       :         : 4         : N              
-i_in[2]                      : D15       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : D16       :        :                   :         : 4         :                
-GND*                         : D17       :        :                   :         : 4         :                
-GND*                         : D18       :        :                   :         : 4         :                
-GND*                         : D19       :        :                   :         : 4         :                
+i_dt2[3]                     : D14       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_entradaPC[3]         : D15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_dt2[2]                     : D16       : input  : 3.3-V LVTTL       :         : 4         : N              
+i_dt2[0]                     : D17       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_IouD                 : D18       : output : 3.3-V LVTTL       :         : 4         : N              
+i_in[24]                     : D19       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : D20       :        :                   :         : 4         :                
 GND*                         : D21       :        :                   :         : 4         :                
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
@@ -324,21 +324,21 @@ GND*                         : D23       :        :                   :         
 GND                          : D24       : gnd    :                   :         :           :                
 GND*                         : D25       :        :                   :         : 5         :                
 GND*                         : D26       :        :                   :         : 5         :                
-dbg_saidaPC[6]               : E1        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_data_3_EntradaMemDados[5] : E2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[0] : E1        : output : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[6]           : E2        : output : 3.3-V LVTTL       :         : 2         : N              
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E3        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL3                     : E4        : gnd    :                   :         :           :                
-dbg_entradaPC[19]            : E5        : output : 3.3-V LVTTL       :         : 2         : N              
+i_in[9]                      : E5        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO3                       : E6        : power  :                   : 3.3V    : 3         :                
 GND                          : E7        : gnd    :                   :         :           :                
-dbg_entradaPC[14]            : E8        : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[16] : E8        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E9        : power  :                   : 3.3V    : 3         :                
-i_dt1[30]                    : E10       : input  : 3.3-V LVTTL       :         : 3         : N              
+control_RegDst               : E10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : E11       : gnd    :                   :         :           :                
-dbg_instruction[24]          : E12       : output : 3.3-V LVTTL       :         : 3         : N              
+control_dt_saida[2]          : E12       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E13       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : E14       : power  :                   : 3.3V    : 4         :                
-dbg_instruction[2]           : E15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_dt2[1]                     : E15       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : E16       : gnd    :                   :         :           :                
 VCCIO4                       : E17       : power  :                   : 3.3V    : 4         :                
 GND*                         : E18       :        :                   :         : 4         :                
@@ -350,24 +350,24 @@ GND*                         : E23       :        :                   :         
 GND*                         : E24       :        :                   :         : 5         :                
 GND*                         : E25       :        :                   :         : 5         :                
 GND*                         : E26       :        :                   :         : 5         :                
-dbg_ULAFonteB[0]             : F1        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_FontePC[0]               : F2        : output : 3.3-V LVTTL       :         : 2         : N              
-i_in[3]                      : F3        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[8]             : F4        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[16]                    : F1        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_dt_saida[11]         : F2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[7]           : F3        : output : 3.3-V LVTTL       :         : 2         : N              
+control_instruction[13]      : F4        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : F5        : power  :                   : 3.3V    : 2         :                
-dbg_ULAOp[0]                 : F6        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[9]              : F7        : output : 3.3-V LVTTL       :         : 2         : N              
+i_in[30]                     : F6        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_in[13]                     : F7        : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDA_PLL3                    : F8        : gnd    :                   :         :           :                
-dbg_regRd_Mux[3]             : F9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[15]            : F10       : output : 3.3-V LVTTL       :         : 3         : N              
-i_dt1[17]                    : F11       : input  : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[30]          : F12       : output : 3.3-V LVTTL       :         : 3         : N              
-i_in[29]                     : F13       : input  : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[28]          : F14       : output : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[19]          : F15       : output : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[21]          : F16       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : F17       :        :                   :         : 4         :                
-GND*                         : F18       :        :                   :         : 4         :                
+i_dt1[15]                    : F9        : input  : 3.3-V LVTTL       :         : 3         : N              
+control_saidaPC[24]          : F10       : output : 3.3-V LVTTL       :         : 3         : N              
+control_ULAOp[1]             : F11       : output : 3.3-V LVTTL       :         : 3         : N              
+control_dt_saida[6]          : F12       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt2[5]                     : F13       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_data_3_EntradaMemDados[6] : F14       : output : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[6]       : F15       : output : 3.3-V LVTTL       :         : 4         : N              
+control_dt_saida[8]          : F16       : output : 3.3-V LVTTL       :         : 4         : N              
+i_in[5]                      : F17       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_dt_saida[5]          : F18       : output : 3.3-V LVTTL       :         : 4         : N              
 GNDA_PLL2                    : F19       : gnd    :                   :         :           :                
 GND*                         : F20       :        :                   :         : 5         :                
 GND*                         : F21       :        :                   :         : 5         :                
@@ -376,24 +376,24 @@ GND*                         : F23       :        :                   :         
 GND*                         : F24       :        :                   :         : 5         :                
 GND*                         : F25       :        :                   :         : 5         :                
 GND*                         : F26       :        :                   :         : 5         :                
-dbg_ULAFonteA                : G1        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_PCEscCond                : G2        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[5]             : G3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[5]              : G4        : output : 3.3-V LVTTL       :         : 2         : N              
-i_in[6]                      : G5        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_regRd_Mux[2]             : G6        : output : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[5]         : G1        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt1[14]                    : G2        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[4]                     : G3        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[30]        : G4        : output : 3.3-V LVTTL       :         : 2         : N              
+i_in[3]                      : G5        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_instruction[30]      : G6        : output : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL3                     : G7        : gnd    :                   :         :           :                
 VCCA_PLL3                    : G8        : power  :                   : 1.2V    :           :                
-dbg_saidaPC[17]              : G9        : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_entradaPC[2]             : G10       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_saidaPC[30]              : G11       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[9]           : G12       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_instruction[29]          : G13       : output : 3.3-V LVTTL       :         : 4         : N              
-i_in[28]                     : G14       : input  : 3.3-V LVTTL       :         : 4         : N              
-i_in[21]                     : G15       : input  : 3.3-V LVTTL       :         : 4         : N              
-i_in[19]                     : G16       : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : G17       :        :                   :         : 4         :                
-GND*                         : G18       :        :                   :         : 4         :                
+control_saidaPC[20]          : G9        : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[23] : G10       : output : 3.3-V LVTTL       :         : 3         : N              
+i_dt2[15]                    : G11       : input  : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[9]                     : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
+i_dt1[2]                     : G13       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_data_3_EntradaMemDados[29] : G14       : output : 3.3-V LVTTL       :         : 4         : N              
+control_dt_saida[0]          : G15       : output : 3.3-V LVTTL       :         : 4         : N              
+i_in[6]                      : G16       : input  : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[26]      : G17       : output : 3.3-V LVTTL       :         : 4         : N              
+control_data_3_EntradaMemDados[5] : G18       : output : 3.3-V LVTTL       :         : 4         : N              
 VCCA_PLL2                    : G19       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
 GND*                         : G21       :        :                   :         : 5         :                
@@ -402,23 +402,23 @@ GND*                         : G23       :        :                   :         
 GND*                         : G24       :        :                   :         : 5         :                
 GND*                         : G25       :        :                   :         : 5         :                
 GND*                         : G26       :        :                   :         : 5         :                
-dbg_dt_saida[13]             : H1        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_saidaPC[5]               : H2        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_data_3_EntradaMemDados[9] : H3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_saidaPC[18]              : H4        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[13] : H1        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[28] : H2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[30]          : H3        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[31] : H4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : H5        : gnd    :                   :         :           :                
-dbg_data_3_EntradaMemDados[0] : H6        : output : 3.3-V LVTTL       :         : 2         : N              
+control_ULAOp[0]             : H6        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCD_PLL3                    : H7        : power  :                   : 1.2V    :           :                
-dbg_data_3_EntradaMemDados[12] : H8        : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[21] : H8        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : H9        : power  :                   : 3.3V    : 3         :                
-dbg_dt_saida[15]             : H10       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[26] : H11       : output : 3.3-V LVTTL       :         : 3         : N              
-dbg_data_3_EntradaMemDados[1] : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+control_regRd_Mux[3]         : H10       : output : 3.3-V LVTTL       :         : 3         : N              
+control_ULAFonteA            : H11       : output : 3.3-V LVTTL       :         : 3         : N              
+control_ULAFonteB[0]         : H12       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : H13       : gnd    :                   :         :           :                
 GND                          : H14       : gnd    :                   :         :           :                
-dbg_instruction[12]          : H15       : output : 3.3-V LVTTL       :         : 4         : N              
-dbg_instruction[8]           : H16       : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : H17       :        :                   :         : 4         :                
+control_instruction[0]       : H15       : output : 3.3-V LVTTL       :         : 4         : N              
+control_instruction[11]      : H16       : output : 3.3-V LVTTL       :         : 4         : N              
+i_in[26]                     : H17       : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : H18       : power  :                   : 3.3V    : 4         :                
 GND*                         : H19       :        :                   :         : 5         :                
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
@@ -428,23 +428,23 @@ GND*                         : H23       :        :                   :         
 GND*                         : H24       :        :                   :         : 5         :                
 GND*                         : H25       :        :                   :         : 5         :                
 GND*                         : H26       :        :                   :         : 5         :                
-dbg_LerMem                   : J1        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt1[19]                    : J2        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[18]            : J3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[18]             : J4        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[15]                    : J5        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_data_3_EntradaMemDados[19] : J6        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_data_3_EntradaMemDados[6] : J7        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[8]                     : J8        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[20]             : J9        : output : 3.3-V LVTTL       :         : 3         : N              
-i_in[30]                     : J10       : input  : 3.3-V LVTTL       :         : 3         : N              
-i_in[9]                      : J11       : input  : 3.3-V LVTTL       :         : 3         : N              
+control_dt_saida[9]          : J1        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt1[21]                    : J2        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt1[6]                     : J3        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[6]                     : J4        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[8]                     : J5        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[16]          : J6        : output : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[31]        : J7        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[15] : J8        : output : 3.3-V LVTTL       :         : 2         : N              
+control_FontePC[0]           : J9        : output : 3.3-V LVTTL       :         : 3         : N              
+control_EscMem               : J10       : output : 3.3-V LVTTL       :         : 3         : N              
+control_EscReg               : J11       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : J12       : power  :                   : 3.3V    : 3         :                
-i_dt1[1]                     : J13       : input  : 3.3-V LVTTL       :         : 3         : N              
-i_in[24]                     : J14       : input  : 3.3-V LVTTL       :         : 3         : N              
+control_entradaPC[6]         : J13       : output : 3.3-V LVTTL       :         : 3         : N              
+control_MemParaReg           : J14       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
 GND*                         : J16       :        :                   :         : 4         :                
-GND*                         : J17       :        :                   :         : 4         :                
+control_instruction[5]       : J17       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : J18       :        :                   :         : 4         :                
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
 GND*                         : J20       :        :                   :         : 5         :                
@@ -452,17 +452,17 @@ GND*                         : J21       :        :                   :         
 GND*                         : J22       :        :                   :         : 5         :                
 GND*                         : J23       :        :                   :         : 5         :                
 GND*                         : J24       :        :                   :         : 5         :                
-GND*                         : J25       :        :                   :         : 5         :                
+i_in[27]                     : J25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : J26       :        :                   :         : 5         :                
-i_dt2[0]                     : K1        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[16]                    : K2        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_dt1[20]                    : K3        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_data_3_EntradaMemDados[18] : K4        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[6]             : K5        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt1[5]                     : K6        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_dt1[6]                     : K7        : input  : 3.3-V LVTTL       :         : 2         : N              
-i_dt2[6]                     : K8        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[13]            : K9        : output : 3.3-V LVTTL       :         : 3         : N              
+control_data_3_EntradaMemDados[11] : K1        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[7] : K2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[1] : K3        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt1[10]                    : K4        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[9]         : K5        : output : 3.3-V LVTTL       :         : 2         : N              
+control_dt_saida[30]         : K6        : output : 3.3-V LVTTL       :         : 2         : N              
+control_dt_saida[7]          : K7        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[14] : K8        : output : 3.3-V LVTTL       :         : 2         : N              
+control_PCEscCond            : K9        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCINT                       : K10       : power  :                   : 1.2V    :           :                
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
 VCCINT                       : K12       : power  :                   : 1.2V    :           :                
@@ -478,18 +478,18 @@ GND*                         : K21       :        :                   :         
 GND*                         : K22       :        :                   :         : 5         :                
 GND*                         : K23       :        :                   :         : 5         :                
 GND*                         : K24       :        :                   :         : 5         :                
-GND*                         : K25       :        :                   :         : 5         :                
-GND*                         : K26       :        :                   :         : 5         :                
+control_instruction[2]       : K25       : output : 3.3-V LVTTL       :         : 5         : N              
+i_in[23]                     : K26       : input  : 3.3-V LVTTL       :         : 5         : N              
 VCCIO2                       : L1        : power  :                   : 3.3V    : 2         :                
-dbg_data_3_EntradaMemDados[3] : L2        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_regRd_Mux[1]             : L3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[20]            : L4        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[11]                    : L2        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[13]                    : L3        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[7]         : L4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : L5        : gnd    :                   :         :           :                
-dbg_data_3_EntradaMemDados[8] : L6        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_EscReg                   : L7        : output : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[29]                    : L6        : input  : 3.3-V LVTTL       :         : 2         : N              
+i_dt2[7]                     : L7        : input  : 3.3-V LVTTL       :         : 2         : N              
 TMS                          : L8        : input  :                   :         : 2         :                
-dbg_dt_saida[17]             : L9        : output : 3.3-V LVTTL       :         : 2         : N              
-i_dt1[10]                    : L10       : input  : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[8] : L9        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[10] : L10       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : L11       : power  :                   : 1.2V    :           :                
 GND                          : L12       : gnd    :                   :         :           :                
 GND                          : L13       : gnd    :                   :         :           :                
@@ -498,19 +498,19 @@ GND                          : L15       : gnd    :                   :         
 VCCINT                       : L16       : power  :                   : 1.2V    :           :                
 VCCINT                       : L17       : power  :                   : 1.2V    :           :                
 VCCINT                       : L18       : power  :                   : 1.2V    :           :                
-GND*                         : L19       :        :                   :         : 5         :                
-GND*                         : L20       :        :                   :         : 5         :                
+i_in[28]                     : L19       : input  : 3.3-V LVTTL       :         : 5         : N              
+control_instruction[27]      : L20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : L21       :        :                   :         : 5         :                
 GND                          : L22       : gnd    :                   :         :           :                
-GND*                         : L23       :        :                   :         : 5         :                
-GND*                         : L24       :        :                   :         : 5         :                
-GND*                         : L25       :        :                   :         : 5         :                
+control_instruction[29]      : L23       : output : 3.3-V LVTTL       :         : 5         : N              
+i_in[29]                     : L24       : input  : 3.3-V LVTTL       :         : 5         : N              
+control_instruction[28]      : L25       : output : 3.3-V LVTTL       :         : 5         : N              
 VCCIO5                       : L26       : power  :                   : 3.3V    : 5         :                
 GND                          : M1        : gnd    :                   :         :           :                
-i_dt2[12]                    : M2        : input  : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[28]             : M3        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_entradaPC[12]            : M4        : output : 3.3-V LVTTL       :         : 2         : N              
-dbg_dt_saida[23]             : M5        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[3] : M2        : output : 3.3-V LVTTL       :         : 2         : N              
+control_data_3_EntradaMemDados[18] : M3        : output : 3.3-V LVTTL       :         : 2         : N              
+control_regRd_Mux[2]         : M4        : output : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[31]          : M5        : output : 3.3-V LVTTL       :         : 2         : N              
 TCK                          : M6        : input  :                   :         : 2         :                
 TDO                          : M7        : output :                   :         : 2         :                
 TDI                          : M8        : input  :                   :         : 2         :                
@@ -524,13 +524,13 @@ GND                          : M15       : gnd    :                   :         
 VCCINT                       : M16       : power  :                   : 1.2V    :           :                
 VCCINT                       : M17       : power  :                   : 1.2V    :           :                
 VCCIO5                       : M18       : power  :                   : 3.3V    : 5         :                
-GND*                         : M19       :        :                   :         : 5         :                
-GND*                         : M20       :        :                   :         : 5         :                
-GND*                         : M21       :        :                   :         : 5         :                
-GND*                         : M22       :        :                   :         : 5         :                
-GND*                         : M23       :        :                   :         : 5         :                
-GND*                         : M24       :        :                   :         : 5         :                
-GND*                         : M25       :        :                   :         : 5         :                
+control_dt_saida[3]          : M19       : output : 3.3-V LVTTL       :         : 5         : N              
+control_saidaPC[1]           : M20       : output : 3.3-V LVTTL       :         : 5         : N              
+control_saidaPC[0]           : M21       : output : 3.3-V LVTTL       :         : 5         : N              
+control_instruction[23]      : M22       : output : 3.3-V LVTTL       :         : 5         : N              
+i_in[2]                      : M23       : input  : 3.3-V LVTTL       :         : 5         : N              
+control_entradaPC[23]        : M24       : output : 3.3-V LVTTL       :         : 5         : N              
+i_dt2[25]                    : M25       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND                          : M26       : gnd    :                   :         :           :                
 GND+                         : N1        :        :                   :         : 2         :                
 reset                        : N2        : input  : 3.3-V LVTTL       :         : 2         : N              
@@ -540,7 +540,7 @@ VCCIO2                       : N5        : power  :                   : 3.3V    
 DCLK                         : N6        :        :                   :         : 2         :                
 nCONFIG                      : N7        :        :                   :         : 2         :                
 GND                          : N8        : gnd    :                   :         :           :                
-i_dt2[11]                    : N9        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_saidaPC[21]          : N9        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 GND                          : N12       : gnd    :                   :         :           :                
@@ -551,22 +551,22 @@ GND                          : N16       : gnd    :                   :         
 VCCINT                       : N17       : power  :                   : 1.2V    :           :                
 GND*                         : N18       :        :                   :         : 5         :                
 GND                          : N19       : gnd    :                   :         :           :                
-GND*                         : N20       :        :                   :         : 5         :                
+control_entradaPC[2]         : N20       : output : 3.3-V LVTTL       :         : 5         : N              
 NC                           : N21       :        :                   :         :           :                
 VCCIO5                       : N22       : power  :                   : 3.3V    : 5         :                
-GND*                         : N23       :        :                   :         : 5         :                
-GND*                         : N24       :        :                   :         : 5         :                
+control_dt_saida[23]         : N23       : output : 3.3-V LVTTL       :         : 5         : N              
+control_dt_saida[28]         : N24       : output : 3.3-V LVTTL       :         : 5         : N              
 i_dt1[23]                    : N25       : input  : 3.3-V LVTTL       :         : 5         : N              
 i_dt2[23]                    : N26       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND+                         : P1        :        :                   :         : 1         :                
 clock                        : P2        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[31]              : P3        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_data_3_EntradaMemDados[31] : P4        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt2[14]                    : P3        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[31]         : P4        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : P5        : power  :                   : 3.3V    : 1         :                
-dbg_dt_saida[31]             : P6        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_data_3_EntradaMemDados[22] : P7        : output : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[24]        : P6        : output : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[18]        : P7        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : P8        : gnd    :                   :         :           :                
-i_dt2[14]                    : P9        : input  : 3.3-V LVTTL       :         : 2         : N              
+control_entradaPC[11]        : P9        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : P10       : power  :                   : 1.2V    :           :                
 GND                          : P11       : gnd    :                   :         :           :                
 GND                          : P12       : gnd    :                   :         :           :                
@@ -585,13 +585,13 @@ GND*                         : P24       :        :                   :         
 GND+                         : P25       :        :                   :         : 6         :                
 GND+                         : P26       :        :                   :         : 6         :                
 GND                          : R1        : gnd    :                   :         :           :                
-dbg_EscMem                   : R2        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_IREsc                    : R3        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[10]              : R4        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[8]                     : R5        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_RegDst                   : R6        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_ULAFonteB[1]             : R7        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_entradaPC[29]            : R8        : output : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[14]        : R2        : output : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[14]          : R3        : output : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[17]          : R4        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[25]                    : R5        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_dt2[12]                    : R6        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[15]         : R7        : output : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[4]       : R8        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : R9        : power  :                   : 3.3V    : 1         :                
 VCCINT                       : R10       : power  :                   : 1.2V    :           :                
 VCCINT                       : R11       : power  :                   : 1.2V    :           :                
@@ -603,23 +603,23 @@ VCCINT                       : R16       : power  :                   : 1.2V    
 GND*                         : R17       :        :                   :         : 6         :                
 VCCIO6                       : R18       : power  :                   : 3.3V    : 6         :                
 GND*                         : R19       :        :                   :         : 6         :                
-dbg_instruction[15]          : R20       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : R20       :        :                   :         : 6         :                
 GND                          : R21       : gnd    :                   :         :           :                
 nSTATUS                      : R22       :        :                   :         : 6         :                
 CONF_DONE                    : R23       :        :                   :         : 6         :                
-dbg_instruction[26]          : R24       : output : 3.3-V LVTTL       :         : 6         : N              
-i_in[26]                     : R25       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : R24       :        :                   :         : 6         :                
+GND*                         : R25       :        :                   :         : 6         :                
 GND                          : R26       : gnd    :                   :         :           :                
 VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
-dbg_dt_saida[0]              : T2        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_ULAOp[1]                 : T3        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_MemParaReg               : T4        : output : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[13]          : T2        : output : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[17]         : T3        : output : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[18]         : T4        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : T5        : gnd    :                   :         :           :                
-dbg_saidaPC[22]              : T6        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[22]             : T7        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[29]              : T8        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_data_3_EntradaMemDados[7] : T9        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[11]             : T10       : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[24]                    : T6        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[26]                    : T7        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_in[4]                      : T8        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_dt2[20]                    : T9        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[20]         : T10       : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
 GND                          : T12       : gnd    :                   :         :           :                
 GND                          : T13       : gnd    :                   :         :           :                
@@ -632,22 +632,22 @@ GND*                         : T19       :        :                   :         
 GND*                         : T20       :        :                   :         : 6         :                
 GND*                         : T21       :        :                   :         : 6         :                
 GND*                         : T22       :        :                   :         : 6         :                
-i_in[15]                     : T23       : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : T23       :        :                   :         : 6         :                
 GND*                         : T24       :        :                   :         : 6         :                
 GND*                         : T25       :        :                   :         : 6         :                
 VCCIO6                       : T26       : power  :                   : 3.3V    : 6         :                
-i_dt1[31]                    : U1        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[9]               : U2        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_entradaPC[9]             : U3        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[10]             : U4        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_data_3_EntradaMemDados[11] : U5        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[0]               : U6        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[31]                    : U7        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[14]         : U1        : output : 3.3-V LVTTL       :         : 1         : N              
+control_data_3_EntradaMemDados[12] : U2        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[17]                    : U3        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_dt2[27]                    : U4        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[28]          : U5        : output : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[12]         : U6        : output : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[10]         : U7        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : U8        : gnd    :                   :         :           :                
-i_dt2[13]                    : U9        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[14]             : U10       : output : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[27]          : U9        : output : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[0]         : U10       : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : U11       : power  :                   : 1.2V    :           :                
-dbg_data_3_EntradaMemDados[17] : U12       : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[26]                    : U12       : input  : 3.3-V LVTTL       :         : 8         : N              
 VCCINT                       : U13       : power  :                   : 1.2V    :           :                
 VCCINT                       : U14       : power  :                   : 1.2V    :           :                
 VCCINT                       : U15       : power  :                   : 1.2V    :           :                
@@ -662,20 +662,20 @@ GND*                         : U23       :        :                   :         
 GND*                         : U24       :        :                   :         : 6         :                
 GND*                         : U25       :        :                   :         : 6         :                
 GND*                         : U26       :        :                   :         : 6         :                
-dbg_entradaPC[10]            : V1        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[10]                    : V2        : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[22]                    : V3        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_saidaPC[23]              : V4        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_entradaPC[23]            : V5        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[29]                    : V6        : input  : 3.3-V LVTTL       :         : 1         : N              
-dbg_dt_saida[29]             : V7        : output : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[25]         : V1        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt2[22]                    : V2        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[18]          : V3        : output : 3.3-V LVTTL       :         : 1         : N              
+control_data_3_EntradaMemDados[24] : V4        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[18]                    : V5        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_in[19]                     : V6        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_in[15]                     : V7        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : V8        : power  :                   : 3.3V    : 1         :                
-i_dt2[4]                     : V9        : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_entradaPC[0]             : V10       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_instruction[23]          : V11       : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : V9        :        :                   :         : 8         :                
+GND*                         : V10       :        :                   :         : 8         :                
+control_dt_saida[22]         : V11       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : V12       : power  :                   : 3.3V    : 8         :                
-dbg_entradaPC[4]             : V13       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[26]                    : V14       : input  : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[24]                    : V13       : input  : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[28]        : V14       : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO7                       : V15       : power  :                   : 3.3V    : 7         :                
 VCCINT                       : V16       : power  :                   : 1.2V    :           :                
 GND*                         : V17       :        :                   :         : 7         :                
@@ -688,21 +688,21 @@ GND*                         : V23       :        :                   :         
 GND*                         : V24       :        :                   :         : 6         :                
 GND*                         : V25       :        :                   :         : 6         :                
 GND*                         : V26       :        :                   :         : 6         :                
-dbg_PCEsc                    : W1        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_regRd_Mux[0]             : W2        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[7]                     : W3        : input  : 3.3-V LVTTL       :         : 1         : N              
-i_dt1[12]                    : W4        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_saidaPC[25]          : W1        : output : 3.3-V LVTTL       :         : 1         : N              
+control_entradaPC[15]        : W2        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[19]                    : W3        : input  : 3.3-V LVTTL       :         : 1         : N              
+i_in[17]                     : W4        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : W5        : gnd    :                   :         :           :                
-i_dt1[28]                    : W6        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[15]      : W6        : output : 3.3-V LVTTL       :         : 1         : N              
 GND_PLL1                     : W7        : gnd    :                   :         :           :                
-i_dt2[3]                     : W8        : input  : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[20]        : W8        : output : 3.3-V LVTTL       :         : 8         : N              
 VCCIO8                       : W9        : power  :                   : 3.3V    : 8         :                
-dbg_dt_saida[16]             : W10       : output : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[2]                     : W11       : input  : 3.3-V LVTTL       :         : 8         : N              
-i_dt1[25]                    : W12       : input  : 3.3-V LVTTL       :         : 8         : N              
+control_entradaPC[27]        : W10       : output : 3.3-V LVTTL       :         : 8         : N              
+control_data_3_EntradaMemDados[30] : W11       : output : 3.3-V LVTTL       :         : 8         : N              
+control_saidaPC[26]          : W12       : output : 3.3-V LVTTL       :         : 8         : N              
 GND                          : W13       : gnd    :                   :         :           :                
 GND                          : W14       : gnd    :                   :         :           :                
-dbg_instruction[16]          : W15       : output : 3.3-V LVTTL       :         : 7         : N              
+i_in[14]                     : W15       : input  : 3.3-V LVTTL       :         : 7         : N              
 i_in[22]                     : W16       : input  : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : W17       :        :                   :         : 7         :                
 VCCIO7                       : W18       : power  :                   : 3.3V    : 7         :                
@@ -714,22 +714,22 @@ GND*                         : W23       :        :                   :         
 GND*                         : W24       :        :                   :         : 6         :                
 GND*                         : W25       :        :                   :         : 6         :                
 GND*                         : W26       :        :                   :         : 6         :                
-i_dt1[9]                     : Y1        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_instruction[17]      : Y1        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : Y2        :        :                   :         :           :                
-dbg_data_3_EntradaMemDados[23] : Y3        : output : 3.3-V LVTTL       :         : 1         : N              
-dbg_FontePC[1]               : Y4        : output : 3.3-V LVTTL       :         : 1         : N              
-i_dt2[21]                    : Y5        : input  : 3.3-V LVTTL       :         : 1         : N              
+control_dt_saida[13]         : Y3        : output : 3.3-V LVTTL       :         : 1         : N              
+i_dt1[5]                     : Y4        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : Y5        :        :                   :         : 1         :                
 GND_PLL1                     : Y6        : gnd    :                   :         :           :                
 VCCD_PLL1                    : Y7        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : Y8        : gnd    :                   :         :           :                
 GND                          : Y9        : gnd    :                   :         :           :                
-dbg_entradaPC[21]            : Y10       : output : 3.3-V LVTTL       :         : 8         : N              
-dbg_dt_saida[4]              : Y11       : output : 3.3-V LVTTL       :         : 8         : N              
-i_in[23]                     : Y12       : input  : 3.3-V LVTTL       :         : 8         : N              
-dbg_instruction[13]          : Y13       : output : 3.3-V LVTTL       :         : 7         : N              
-i_in[20]                     : Y14       : input  : 3.3-V LVTTL       :         : 7         : N              
-i_in[13]                     : Y15       : input  : 3.3-V LVTTL       :         : 7         : N              
-dbg_instruction[7]           : Y16       : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : Y10       :        :                   :         : 8         :                
+control_dt_saida[26]         : Y11       : output : 3.3-V LVTTL       :         : 8         : N              
+i_dt2[21]                    : Y12       : input  : 3.3-V LVTTL       :         : 8         : N              
+control_data_3_EntradaMemDados[4] : Y13       : output : 3.3-V LVTTL       :         : 7         : N              
+i_dt1[3]                     : Y14       : input  : 3.3-V LVTTL       :         : 7         : N              
+i_dt1[22]                    : Y15       : input  : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : Y16       :        :                   :         : 7         :                
 GND                          : Y17       : gnd    :                   :         :           :                
 GND*                         : Y18       :        :                   :         : 7         :                
 GNDA_PLL4                    : Y19       : gnd    :                   :         :           :                

@@ -1,0 +1,650 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/work/mips/simulation/modelsim
+Eandor
+Z1 w1573923020
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/work/mips/simulation/modelsim
+Z6 8/work/mips/Components/AndOr.vhd
+Z7 F/work/mips/Components/AndOr.vhd
+l0
+L5
+VTgl^106NlikH?FWIn4iLz0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1574229695.821966
+Z10 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/AndOr.vhd|
+Z11 !s107 /work/mips/Components/AndOr.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ThmSgz1DGGYM`LzVS;SeI3
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 5 andor 0 22 Tgl^106NlikH?FWIn4iLz0
+l16
+L15
+VZ@:aXKgJ:d7@DbVMfebPI0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 eHbaPo]9oTb^bRBVP0ELo0
+!i10b 1
+Ebitsreg
+Z14 w1573848499
+Z15 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R3
+R4
+R5
+Z17 8/work/mips/Components/bitsReg.vhd
+Z18 F/work/mips/Components/bitsReg.vhd
+l0
+L5
+V:GI6AJzVRLTINA]6=[mO;0
+R8
+31
+Z19 !s108 1574229696.619356
+Z20 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/bitsReg.vhd|
+Z21 !s107 /work/mips/Components/bitsReg.vhd|
+R12
+R13
+!s100 ;<7RolTHdmaHTGMWz4@cP3
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 7 bitsreg 0 22 :GI6AJzVRLTINA]6=[mO;0
+l15
+L13
+Vk]eNf9d7J0gjWKJ46C6di2
+R8
+31
+R19
+R20
+R21
+R12
+R13
+!s100 igd1SV7<Z[ZP>6aLb85_W1
+!i10b 1
+Econtrole
+Z22 w1574225531
+R3
+R4
+R5
+Z23 8/work/mips/Controle.vhd
+Z24 F/work/mips/Controle.vhd
+l0
+L4
+VPHXllTm:<TJgA`S3Mc^N61
+!s100 gY?XOQ6:CkX1ed[ZlFWTj1
+R8
+31
+!i10b 1
+Z25 !s108 1574229696.711081
+Z26 !s90 -reportprogress|300|-93|-work|work|/work/mips/Controle.vhd|
+Z27 !s107 /work/mips/Controle.vhd|
+R12
+R13
+Afsm
+R3
+R4
+DEx4 work 8 controle 0 22 PHXllTm:<TJgA`S3Mc^N61
+l32
+L24
+V`6i:`hSgVX6k8FAV8>Y3e0
+!s100 m7BHe@6S2>Ib_k8AFlV@>2
+R8
+31
+!i10b 1
+R25
+R26
+R27
+R12
+R13
+Edatapath
+Z28 w1574228637
+R15
+R16
+R3
+R4
+R5
+Z29 8/work/mips/Datapath.vhd
+Z30 F/work/mips/Datapath.vhd
+l0
+L6
+VPkCL9iDVz;X7oL@<_=SeP1
+R8
+31
+Z31 !s108 1574229696.663308
+Z32 !s90 -reportprogress|300|-93|-work|work|/work/mips/Datapath.vhd|
+Z33 !s107 /work/mips/Datapath.vhd|
+R12
+R13
+!s100 LiL]Xz534=k4WO;R@Pb733
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 8 datapath 0 22 PkCL9iDVz;X7oL@<_=SeP1
+l185
+L21
+VIha0CKA3SW<DL^?m:_7I<2
+R8
+31
+R31
+R32
+R33
+R12
+R13
+!s100 3[L@EbgI5]o9?a9bI_O:b3
+!i10b 1
+Ememdados
+R14
+R15
+R16
+R3
+R4
+R5
+Z34 8/work/mips/Components/memDados.vhd
+Z35 F/work/mips/Components/memDados.vhd
+l0
+L5
+VKQQ4NcnPdaOiS9?eM?Jgf2
+R8
+31
+Z36 !s108 1574229696.579539
+Z37 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/memDados.vhd|
+Z38 !s107 /work/mips/Components/memDados.vhd|
+R12
+R13
+!s100 GzE@RYKe_`JgT7UoR^bD23
+!i10b 1
+Artl
+R15
+R16
+R3
+R4
+DEx4 work 8 memdados 0 22 KQQ4NcnPdaOiS9?eM?Jgf2
+l29
+L18
+VUFdD=88ENX;7]@]BCVM4A0
+R8
+31
+R36
+R37
+R38
+R12
+R13
+!s100 bPB1kcFSPUYBS7KW:=3ob2
+!i10b 1
+Ememinstrucao
+R14
+R15
+R16
+R3
+R4
+R5
+Z39 8/work/mips/Components/memInstrucoes.vhd
+Z40 F/work/mips/Components/memInstrucoes.vhd
+l0
+L5
+V;09VOA@K@Ub^daB9eP>ff3
+R8
+31
+Z41 !s108 1574229696.535233
+Z42 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/memInstrucoes.vhd|
+Z43 !s107 /work/mips/Components/memInstrucoes.vhd|
+R12
+R13
+!s100 zYN@]LzcM=A<H?YeBBa^M3
+!i10b 1
+Artl
+R15
+R16
+R3
+R4
+DEx4 work 12 meminstrucao 0 22 ;09VOA@K@Ub^daB9eP>ff3
+l24
+L15
+VGm]>_zc[_o@K5ZI3E4NPz0
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 9f3SiIP^<eQB00OCIAEOC0
+!i10b 1
+Emux2x1
+R14
+R2
+R3
+R4
+R5
+Z44 8/work/mips/Components/Mux2x1.vhd
+Z45 F/work/mips/Components/Mux2x1.vhd
+l0
+L5
+VP^SidVDEcg_>chR`FjnbK2
+R8
+31
+Z46 !s108 1574229696.497406
+Z47 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/Mux2x1.vhd|
+Z48 !s107 /work/mips/Components/Mux2x1.vhd|
+R12
+R13
+!s100 P`iNj<FmKMKLNoMHQKB[_0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 6 mux2x1 0 22 P^SidVDEcg_>chR`FjnbK2
+l17
+L16
+V9:N9jX?jhY5CdPhQB<V@22
+R8
+31
+R46
+R47
+R48
+R12
+R13
+!s100 be7NIM<J4T0Q1M;86GD7c0
+!i10b 1
+Emux4x1
+R14
+R2
+R3
+R4
+R5
+Z49 8/work/mips/Components/Mux4x1.vhd
+Z50 F/work/mips/Components/Mux4x1.vhd
+l0
+L5
+VPbS37KWKYF<F@IcOU058^1
+R8
+31
+Z51 !s108 1574229696.453316
+Z52 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/Mux4x1.vhd|
+Z53 !s107 /work/mips/Components/Mux4x1.vhd|
+R12
+R13
+!s100 XRl?jQATef0Ti3o?fMF4D1
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 6 mux4x1 0 22 PbS37KWKYF<F@IcOU058^1
+l19
+L18
+V]ViaUL<MMY7Fm6CS96D5W0
+R8
+31
+R51
+R52
+R53
+R12
+R13
+!s100 BoYUPcA_H?94lLCTWjIDX0
+!i10b 1
+Eprogramcounter
+Z54 w1573848564
+R15
+R16
+R3
+R4
+R5
+Z55 8/work/mips/Components/ProgramCounter.vhd
+Z56 F/work/mips/Components/ProgramCounter.vhd
+l0
+L5
+VOkXEIHkzm:<;iRT=0^iG^3
+R8
+31
+Z57 !s108 1574229696.415741
+Z58 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/ProgramCounter.vhd|
+Z59 !s107 /work/mips/Components/ProgramCounter.vhd|
+R12
+R13
+!s100 W`cjiz2V5Mj<FeB;e<b8G3
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 14 programcounter 0 22 OkXEIHkzm:<;iRT=0^iG^3
+l15
+L13
+Vh5G8gJ?f8lRWSZnK[=``?3
+R8
+31
+R57
+R58
+R59
+R12
+R13
+!s100 BbMAZPLXgLTfUnQFiOdGS1
+!i10b 1
+Ereginstrucao
+Z60 w1573848789
+R15
+R16
+R3
+R4
+R5
+Z61 8/work/mips/Components/regInstrucao.vhd
+Z62 F/work/mips/Components/regInstrucao.vhd
+l0
+L5
+VPcd@ZSWYH>Xbz`:cD8Fm<1
+R8
+31
+Z63 !s108 1574229696.370816
+Z64 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/regInstrucao.vhd|
+Z65 !s107 /work/mips/Components/regInstrucao.vhd|
+R12
+R13
+!s100 kLGUQSBgoI_`fkbYIVdhI2
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 12 reginstrucao 0 22 Pcd@ZSWYH>Xbz`:cD8Fm<1
+l29
+L19
+VbQZLI9hJTiI72M7GZYmkm3
+R8
+31
+R63
+R64
+R65
+R12
+R13
+!s100 4VGN1]f[R4PZ_dcKzkJ5R3
+!i10b 1
+Eshiftleft2
+Z66 w1573848870
+R15
+R16
+R3
+R4
+R5
+Z67 8/work/mips/Components/shiftLeft2.vhd
+Z68 F/work/mips/Components/shiftLeft2.vhd
+l0
+L5
+V@Q8Y4S6aVod6zfM;:5l_R0
+R8
+31
+Z69 !s108 1574229696.326044
+Z70 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/shiftLeft2.vhd|
+Z71 !s107 /work/mips/Components/shiftLeft2.vhd|
+R12
+R13
+!s100 ]oRQ9YccD_TTXR46PH0TZ0
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 10 shiftleft2 0 22 @Q8Y4S6aVod6zfM;:5l_R0
+l13
+L12
+VknckY27HIQkQ7YXJ`oL2z1
+R8
+31
+R69
+R70
+R71
+R12
+R13
+!s100 JFX[?f=36]boZeO_blBKh1
+!i10b 1
+Eshiftleft22
+Z72 w1573849024
+R15
+R16
+R3
+R4
+R5
+Z73 8/work/mips/Components/shiftleft22.vhd
+Z74 F/work/mips/Components/shiftleft22.vhd
+l0
+L5
+VLX^Ko2^oMAndEWG@5TkK<2
+R8
+31
+Z75 !s108 1574229696.249140
+Z76 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/shiftleft22.vhd|
+Z77 !s107 /work/mips/Components/shiftleft22.vhd|
+R12
+R13
+!s100 <2ci4jaom?_aKS]MmRnM:1
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 11 shiftleft22 0 22 LX^Ko2^oMAndEWG@5TkK<2
+l13
+L12
+VAP:>z1LX9a1LM_0SEO>h`0
+R8
+31
+R75
+R76
+R77
+R12
+R13
+!s100 ^4eKEaYoSiEdGRg^UJJ4>1
+!i10b 1
+Esignalextender
+Z78 w1573849168
+R15
+R16
+R3
+R4
+R5
+Z79 8/work/mips/Components/SignalExtender.vhd
+Z80 F/work/mips/Components/SignalExtender.vhd
+l0
+L5
+VJEA;Ej2HYjT<;L>eWE:lh2
+R8
+31
+Z81 !s108 1574229696.083899
+Z82 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/SignalExtender.vhd|
+Z83 !s107 /work/mips/Components/SignalExtender.vhd|
+R12
+R13
+!s100 UgLYbU22<VLPjL0H>jREZ1
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 14 signalextender 0 22 JEA;Ej2HYjT<;L>eWE:lh2
+l13
+L12
+V[8CNfDGbdzVFI6N@@iFb71
+R8
+31
+R81
+R82
+R83
+R12
+R13
+!s100 M;JYJC>J1mzdK36lNfRMa0
+!i10b 1
+Esumsub
+Z84 w1573849247
+R2
+R3
+R4
+R5
+Z85 8/work/mips/Components/SumSub.vhd
+Z86 F/work/mips/Components/SumSub.vhd
+l0
+L5
+Vjm]^=@ZR6<2g9gNaBL;L=3
+R8
+31
+Z87 !s108 1574229696.046429
+Z88 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/SumSub.vhd|
+Z89 !s107 /work/mips/Components/SumSub.vhd|
+R12
+R13
+!s100 ?aMZFTSn3hVcNk;V7Ya<@2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 6 sumsub 0 22 jm]^=@ZR6<2g9gNaBL;L=3
+l16
+L15
+VziD9T9X15;JiaX4ZI?8oo3
+R8
+31
+R87
+R88
+R89
+R12
+R13
+!s100 mAFmaJYLEYF;zW62YF`@g2
+!i10b 1
+Eula
+Z90 w1574227391
+R2
+R3
+R4
+R5
+Z91 8/work/mips/Components/ULA.vhd
+Z92 F/work/mips/Components/ULA.vhd
+l0
+L5
+VXzoHm2]H<G7JzCITb8l>^3
+R8
+31
+Z93 !s108 1574229696.000730
+Z94 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/ULA.vhd|
+Z95 !s107 /work/mips/Components/ULA.vhd|
+R12
+R13
+!s100 lYP]CN2CPHAo1hc:7Wc3W0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 3 ula 0 22 XzoHm2]H<G7JzCITb8l>^3
+l51
+L16
+VRFPkl3X`Bn>TmEHnm?URC1
+R8
+31
+R93
+R94
+R95
+R12
+R13
+!s100 koI;8OaFTfn_<Df92I7JC1
+!i10b 1
+Eula_control
+Z96 w1574227790
+R2
+R3
+R4
+R5
+Z97 8/work/mips/Components/ULA_Control.vhd
+Z98 F/work/mips/Components/ULA_Control.vhd
+l0
+L5
+V_94VQXJ0`=^33olH6>[k>2
+R8
+31
+Z99 !s108 1574229695.948474
+Z100 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/ULA_Control.vhd|
+Z101 !s107 /work/mips/Components/ULA_Control.vhd|
+R12
+R13
+!s100 a_0CYAbAdFd007ajimkQ<1
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 11 ula_control 0 22 _94VQXJ0`=^33olH6>[k>2
+l21
+L13
+VQmGLfXgQFOnA2UI:Rmhai2
+R8
+31
+R99
+R100
+R101
+R12
+R13
+!s100 ?aXW942kW2`D2SK:A3KK83
+!i10b 1
+Eula_wrapper
+Z102 w1574227905
+R2
+R3
+R4
+R5
+Z103 8/work/mips/Components/ULA_Wrapper.vhd
+Z104 F/work/mips/Components/ULA_Wrapper.vhd
+l0
+L5
+VIDWch>hY71fJdV`[3zD870
+R8
+31
+Z105 !s108 1574229695.902110
+Z106 !s90 -reportprogress|300|-93|-work|work|/work/mips/Components/ULA_Wrapper.vhd|
+Z107 !s107 /work/mips/Components/ULA_Wrapper.vhd|
+R12
+R13
+!s100 mBQOA9SW9c1GA9J_[4hkA2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 11 ula_wrapper 0 22 IDWch>hY71fJdV`[3zD870
+l41
+L18
+V_cGRL3dBi>YH2YZ>aiId=0
+R8
+31
+R105
+R106
+R107
+R12
+R13
+!s100 5:Ha4BHXi0@aN^3OdAFG`2
+!i10b 1
