@@ -155,8 +155,14 @@
 # -- Compiling entity Controle
 # -- Compiling architecture FSM of Controle
 # 
-vsim -voptargs=+acc work.datapath
-# vsim -voptargs=+acc work.datapath 
+vsim work.controle
+# vsim work.controle 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.controle(fsm)
+vsim work.datapath
+# vsim work.datapath 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -198,14 +204,22 @@ sim:/datapath/ULAFonteA \
 sim:/datapath/ULAFonteB \
 sim:/datapath/ULAOp \
 sim:/datapath/Zero \
-sim:/datapath/addressIn \
+sim:/datapath/addressIn
+add wave  \
 sim:/datapath/clock
 add wave  \
-sim:/datapath/i_in
-add wave  \
+sim:/datapath/desvioJ \
+sim:/datapath/entradaPC \
+sim:/datapath/funcCode \
 sim:/datapath/i_dt1 \
-sim:/datapath/i_dt2
-do /work/mips/Estimulos/add.do
+sim:/datapath/i_dt2 \
+sim:/datapath/i_in \
+sim:/datapath/saidaPC \
+sim:/datapath/saidaRegA \
+sim:/datapath/saidaRegB \
+sim:/datapath/saidaRegULA \
+sim:/datapath/writeEnablePC
+do /work/mips/Estimulos/jump.do
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/MemDad
@@ -228,31 +242,11 @@ run
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 1  Instance: /datapath/MemIns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 2  Instance: /datapath/MemIns
+#    Time: 0 ps  Iteration: 2  Instance: /datapath/MemIns
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 2  Instance: /datapath/MemIns
+#    Time: 0 ps  Iteration: 2  Instance: /datapath/MemIns
 run
 run
 run
 run
-run
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1400 ns  Iteration: 2  Instance: /datapath/MemIns
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 1400 ns  Iteration: 2  Instance: /datapath/MemIns
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 3 us  Iteration: 2  Instance: /datapath/MemIns
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 3 us  Iteration: 2  Instance: /datapath/MemIns
-run
-run
-run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /work/mips/simulation/modelsim/jump_wave.do

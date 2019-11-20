@@ -216,7 +216,7 @@ ARCHITECTURE Behavior OF Datapath IS
 	
 		ULAUnit: ULA_Wrapper generic map (DATA => 32) port map (RegAULA, RegBULA, ULAOp, funcCode, Result, Zero);
 		RegIns: regInstrucao port map (IREsc, dataSaidaMemInstrucao, opCode, regRs, regRt, regRd, imm, jumpAddr, funcCode);
-		MemIns: memInstrucao generic map (DATA_WIDTH => 32, ADDR_WIDTH => 10 ) port map (addressIn, temp, dataEntradaMemInstrucao, LerMem, EscMem);
+		MemIns: memInstrucao generic map (DATA_WIDTH => 32, ADDR_WIDTH => 10 ) port map (addressIn, temp, saidaRegB, LerMem, EscMem);
 		MemDad: memDados generic map (DATA_WIDTH => 32, ADDR_WIDTH => 5) port map (regRs, regRt, regRd_Mux, temp_dt1, temp_dt2, data_3_EntradaMemDados, EscReg);
 		
 		--Regs genericos

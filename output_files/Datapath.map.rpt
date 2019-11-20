@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Datapath
-Wed Nov 20 03:00:42 2019
+Wed Nov 20 16:06:23 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -61,13 +61,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 20 03:00:42 2019           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 20 16:06:23 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Datapath                                        ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 553                                             ;
-;     Total combinational functions  ; 455                                             ;
+; Total logic elements               ; 506                                             ;
+;     Total combinational functions  ; 408                                             ;
 ;     Dedicated logic registers      ; 138                                             ;
 ; Total registers                    ; 138                                             ;
 ; Total pins                         ; 279                                             ;
@@ -204,16 +204,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 553   ;
+; Estimated Total logic elements              ; 506   ;
 ;                                             ;       ;
-; Total combinational functions               ; 455   ;
+; Total combinational functions               ; 408   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 176   ;
-;     -- 3 input functions                    ; 268   ;
+;     -- 4 input functions                    ; 198   ;
+;     -- 3 input functions                    ; 199   ;
 ;     -- <=2 input functions                  ; 11    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 393   ;
+;     -- normal mode                          ; 346   ;
 ;     -- arithmetic mode                      ; 62    ;
 ;                                             ;       ;
 ; Total registers                             ; 138   ;
@@ -224,8 +224,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 138   ;
-; Total fan-out                               ; 1997  ;
-; Average fan-out                             ; 2.29  ;
+; Total fan-out                               ; 1846  ;
+; Average fan-out                             ; 2.24  ;
 +---------------------------------------------+-------+
 
 
@@ -234,14 +234,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
-; |Datapath                              ; 455 (14)          ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 279  ; 0            ; |Datapath                                                        ; work         ;
+; |Datapath                              ; 408 (0)           ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 279  ; 0            ; |Datapath                                                        ; work         ;
 ;    |Controle:Control|                  ; 25 (25)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Controle:Control                                       ; work         ;
 ;    |Mux2x1:Mux2|                       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux2                                            ; work         ;
 ;    |Mux2x1:Mux3|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux3                                            ; work         ;
 ;    |Mux2x1:Mux4|                       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux2x1:Mux4                                            ; work         ;
 ;    |Mux4x1:Mux5|                       ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux5                                            ; work         ;
-;    |Mux4x1:Mux6|                       ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux6                                            ; work         ;
-;    |ProgramCounter:PC1|                ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ProgramCounter:PC1                                     ; work         ;
+;    |Mux4x1:Mux6|                       ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Mux4x1:Mux6                                            ; work         ;
 ;    |ULA_Wrapper:ULAUnit|               ; 173 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit                                    ; work         ;
 ;       |ULA:UlaInstance|                ; 169 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance                    ; work         ;
 ;          |Mux2x1:Multiplexer|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|Mux2x1:Multiplexer ; work         ;
@@ -280,7 +279,6 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+----------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
 +-----------------------------------------------------+----------------------------------+------------------------+
-; ProgramCounter:PC1|addr_Output[0]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output7[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output7[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
@@ -288,52 +286,21 @@ Encoding Type:  One-Hot
 ; regInstrucao:RegIns|addr_Output7[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output7[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output7[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[31]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[15]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[30]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[29]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[28]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[27]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[26]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[25]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[24]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[23]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[22]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[21]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[20]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[19]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[18]                  ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[17]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[14]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[16]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[13]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[15]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[12]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[14]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[11]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[13]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[10]                ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[12]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[9]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[11]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[8]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[10]                  ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[7]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[9]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[6]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[8]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[7]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[6]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[5]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[2]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[4]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output5[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; ProgramCounter:PC1|addr_Output[3]                   ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[2]                   ; writeEnablePC                    ; yes                    ;
-; ProgramCounter:PC1|addr_Output[1]                   ; writeEnablePC                    ; yes                    ;
 ; regInstrucao:RegIns|addr_Output3[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output4[0]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output3[1]                 ; Controle:Control|currentState.S0 ; yes                    ;
@@ -376,7 +343,7 @@ Encoding Type:  One-Hot
 ; regInstrucao:RegIns|addr_Output1[3]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output1[4]                 ; Controle:Control|currentState.S0 ; yes                    ;
 ; regInstrucao:RegIns|addr_Output1[5]                 ; Controle:Control|currentState.S0 ; yes                    ;
-; Number of user-specified and inferred latches = 96  ;                                  ;                        ;
+; Number of user-specified and inferred latches = 64  ;                                  ;                        ;
 +-----------------------------------------------------+----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -401,14 +368,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[22]                                       ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[18]                                       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA_Control:UlaControlInstance|Mux3 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[0]                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[1]                                        ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                              ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[12]                                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[13]                                       ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux5|S[28]                                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[0]                                        ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|Result[1]           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|Mux4x1:Mux6|S[30]                                       ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |Datapath|ULA_Wrapper:ULAUnit|ULA:UlaInstance|Result[17]          ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Datapath|Controle:Control|nextState                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
@@ -599,7 +566,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 20 03:00:39 2019
+    Info: Processing started: Wed Nov 20 16:06:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c Datapath
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file Components/ULAWrapper.vhd is missing
@@ -666,7 +633,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file Control
     Info (12022): Found design unit 1: Controle-FSM
     Info (12023): Found entity 1: Controle
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Datapath.vhd(155): used implicit default value for signal "dataEntradaMemInstrucao" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhd(183): object "temp_dt2" assigned a value but never read
@@ -835,39 +801,7 @@ Info (12128): Elaborating entity "SignalExtender" for hierarchy "SignalExtender:
 Info (12128): Elaborating entity "shiftLeft2" for hierarchy "shiftLeft2:Desloca1"
 Info (12128): Elaborating entity "shiftleft22" for hierarchy "shiftleft22:Desloca2"
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:PC1"
-Warning (10631): VHDL Process Statement warning at ProgramCounter.vhd(17): inferring latch(es) for signal or variable "addr_Output", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "addr_Output[0]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[1]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[2]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[3]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[4]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[5]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[6]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[7]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[8]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[9]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[10]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[11]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[12]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[13]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[14]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[15]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[16]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[17]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[18]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[19]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[20]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[21]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[22]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[23]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[24]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[25]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[26]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[27]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[28]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[29]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[30]" at ProgramCounter.vhd(17)
-Info (10041): Inferred latch for "addr_Output[31]" at ProgramCounter.vhd(17)
+Warning (10036): Verilog HDL or VHDL warning at ProgramCounter.vhd(14): object "addr_Output" assigned a value but never read
 Warning (14026): LATCH primitive "Mux4x1:Mux6|S[0]" is permanently enabled
 Warning (14026): LATCH primitive "Mux4x1:Mux6|S[1]" is permanently enabled
 Warning (14026): LATCH primitive "Mux4x1:Mux6|S[2]" is permanently enabled
@@ -965,80 +899,49 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[18]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[2]"
     Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[19]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[3]"
     Info (13026): Duplicate LATCH primitive "regInstrucao:RegIns|addr_Output6[20]" merged with LATCH primitive "regInstrucao:RegIns|addr_Output3[4]"
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
-Warning (13012): Latch ProgramCounter:PC1|addr_Output[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controle:Control|currentState.S0
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "control_saidaPC[0]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[1]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[2]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[3]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[4]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[5]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[6]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[7]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[8]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[9]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[10]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[11]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[12]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[13]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[14]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[15]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[16]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[17]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[18]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[19]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[20]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[21]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[22]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[23]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[24]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[25]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[26]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[27]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[28]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[29]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[30]" is stuck at GND
+    Warning (13410): Pin "control_saidaPC[31]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 864 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 817 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 98 input pins
     Info (21059): Implemented 181 output pins
-    Info (21061): Implemented 585 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 152 warnings
+    Info (21061): Implemented 538 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 120 warnings
     Info: Peak virtual memory: 626 megabytes
-    Info: Processing ended: Wed Nov 20 03:00:42 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Wed Nov 20 16:06:23 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 
