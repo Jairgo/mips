@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{graphicx}
+\graphicspath{{figuras/}}
 \usetikzlibrary{arrows,automata}
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
@@ -44,29 +45,78 @@
     salvos poderia haver a possibilidade de uma disputa de sincronização,
     levando ao uso de um valor incorreto.
 
-    \subsection{Circuitos}
+        \subsection{Circuitos}
 
-    \begin{figure}[H]
-        \centering % para centralizarmos a figura
-        \includegraphics[width=\textwidth]{circuito_mips.png} % leia abaixo
-        \label{figura:mips}
-    \end{figure}
 
-    \subsection{Diagramas}
+        \begin{figure}[H]
+            \centering % para centralizarmos a figura
+            \includegraphics[width=\textwidth]{circuito_mips.png} % leia abaixo
+            \caption{Circuito do MIPS multiciclo.}
+            \label{figura:mips}
+        \end{figure}
 
-    Eu preciso completar isso
+        \subsection{Diagramas}
 
-    \subsection{Maquinas de Estado}
+        \subsection{Transição de Estados}
 
-    \begin{figure}[H]
-        \centering % para centralizarmos a figura
-        \includegraphics[scale=1.5]{maquina_estados.png} % leia abaixo
-        \label{figura:maquina}
-    \end{figure}
+        Pegar nos slides.
 
-    \section{Resultados de atrasos}
+        \subsection{Maquinas de Estado}
 
-    Eu preciso completar isso
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=1.5]{maquina_estados.png}
+            \caption{Maquina de estados do MIPS multiciclo.}
+            \label{figura:maquina}
+        \end{figure}
+
+        \section{Resultados de atrasos}
+
+        A seguir é apresentado os dados adquiridos após a compilação do MIPS
+        multiciclo.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{clock_to_output_times.jpg}
+            \caption{Clock to Output Times.}
+            \label{figura:mips}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{flow_summary.jpg}
+            \caption{Flow Summary.}
+            \label{figura:mips}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{hold_times.jpg}
+            \caption{Hold Times.}
+            \label{figura:mips}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{minimum_propagation_delay.jpg}
+            \caption{Minimum Propagation Delay.}
+            \label{figura:mips}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{propagation_delay.jpg}
+            \caption{Propagation Delay.}
+            \label{figura:mips}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{setup_times.jpg}
+            \caption{Setup Times.}
+            \label{figura:mips}
+        \end{figure}
+
 
     \section{Utilização da placa}
 
