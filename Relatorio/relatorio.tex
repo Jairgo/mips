@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{listings}
 \graphicspath{{figuras/}}
 \usetikzlibrary{arrows,automata}
 \usepackage[utf8]{inputenc}
@@ -84,13 +85,6 @@
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{flow_summary.jpg}
-            \caption{Flow Summary.}
-            \label{figura:mips}
-        \end{figure}
-
-        \begin{figure}[H]
-            \centering
             \includegraphics[width=\textwidth]{hold_times.jpg}
             \caption{Hold Times.}
             \label{figura:mips}
@@ -120,7 +114,17 @@
 
     \section{Utilização da placa}
 
-    Eu preciso completar isso
+    Utilizando os dados de compilação do Quartus, podemos ver que quanto ao uso de placa, o MIPS
+    faz uso de uma quantidade muito pequena de registradores e funções combinacionais se comparado
+    com o máximo suportado pela placa. Entretanto, o uso de pinos por parte dessa implementação é 
+    elevado, chegando a ultrapassar 50\% da capacidade total da placa.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{flow_summary.jpg}
+        \caption{Flow Summary.}
+        \label{figura:mips}
+    \end{figure}
 
     \section{Discussão dos resultados}
 
@@ -136,11 +140,52 @@
     continuar, isso limitou significativament o teste de um bloco grande de instruções e nos levou a optar
     por executar isoladamente cada instrução implementada.
 
-    Apesar de ser apenas uma versão resumida do MIPS, a implementação realizada contribui com a fixação
-    de conhecimentos adquiridos tanto durante as aulas práticas quanto teóricas.
+    A criação e validação de uma memória de instruções também foi um problema, já que para forçar os 
+    sinais necessários para testes das instruções, esses testes deveriam ser inseridos diretamente na
+    memória de instruções, porém a inserção de dados na memória de instruções da maneira atual só pode
+    ser feita a partir de uma instrução (store word). Assim, foi decisão do grupo criar sinais "mímicos"
+    para realizar os testes, estes sinais irão substituir a saída da memória de instruções e irão copiar
+    a saída dos registradores mais importantes da implementação. Apesar de funcionar como uma metodologia 
+    de teste, para a implementação completa do MIPS, outra solução deve ser escolhida.
+
+    As instruções que foram implementadas: Tipo R, Jump, Beq, Load Word, Store Word.
+    As instruções que foram validadas: Tipo R, Jump, Beq, Store Word
+
+    A instrução Load Word não pode ser validada (apesar de ter sido implementada) justamente pela limitação
+    de testes usando um sinal que imita a saída da memória de dados.
+
+    \section{Testes}
+
+    Instrução tipo R: esse teste em específico realizou a instrução add a seguir, com os valores dos 
+    registradores base setados para 8 e 4, resultando em uma saída 12.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{add_wave.jpg}
+        \caption{Onda da simulação de uma instrução R}
+        \label{figura:mips}
+    \end{figure}
+
+    Instrução tipo J: esse teste em específico realizou a instrução jump a seguir, com um deslocamento
+    do PC no valor de 24 unidades
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{jump_wave.jpg}
+        \caption{Onda da simulação de uma instrução J}
+        \label{figura:mips}
+    \end{figure}
 
     \section{Conclusões}
 
-    Eu preciso completar isso
+    Apesar de ser apenas uma versão resumida do MIPS, a implementação realizada contribui com a fixação
+    de conhecimentos adquiridos tanto durante as aulas práticas quanto teóricas. Como processador com fins
+    didáticos o MIPS cumpre um bom papel, sendo a compreensão do seu funcionamento intuitiva e simples.
+    Entretanto, o uso comercial do MIPS, que já foi explorado por algumas empresas, exige a implementação
+    de todas as features do processador, incluindo também aumento nas memórias e quantidade de instruções.
+
+    A gama limitada de instruções dessa versão do processador ainda consegue realizar blocos de instruções
+    moderadamente complexos, mas pelo tamanho reduzido do banco de registradores e da memória RAM desse projeto,
+    torna-se inviável escrever um programa completo para rodar nessa implementação reduzida. 
 
 \end{document}
