@@ -1,2 +1,9 @@
 *.aux
 *.log
+db/
+incremental_db/
+simulation/
+output_files/
+*.qpf
+*.qsf
+*.rpt
