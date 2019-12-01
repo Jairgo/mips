@@ -1,4 +1,4 @@
-# MIPS-Multiciclo
-Implementação do MIPS Multiciclo usando VHDL - Com arquivos de teste
+# MIPS (Microprocessor without interlocked pipeline stages)
 
-Arquivo principal (topo) -> datapath.vhd
+Implementação de um MIPS multiciclo com o uso da linguagem VHDL, desenvolvido como trabalho final da disciplina INE5406 (Sistemas Digitais), do Departamento de Informática e Estatística (INE), UFSC, câmpus Florianópolis.
+
